@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/tennis-clash-deck/static/css/main.233db359.css",
+    "main.js": "/tennis-clash-deck/static/js/main.f0119547.js",
+    "static/media/legends.png": "/tennis-clash-deck/static/media/legends.ad2e0c52c89caa091783.png",
+    "static/media/ao-open.png": "/tennis-clash-deck/static/media/ao-open.50a041d614b985824bb8.png",
+    "static/media/cover.jpg": "/tennis-clash-deck/static/media/cover.20f9a980a1b8a5ce49a3.jpg",
+    "static/media/kyrgios.jpg": "/tennis-clash-deck/static/media/kyrgios.fc2686954648daa0757c.jpg",
+    "index.html": "/tennis-clash-deck/index.html",
+    "main.233db359.css.map": "/tennis-clash-deck/static/css/main.233db359.css.map",
+    "main.f0119547.js.map": "/tennis-clash-deck/static/js/main.f0119547.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.233db359.css",
+    "static/js/main.f0119547.js"
+  ]
+}
