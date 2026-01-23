@@ -1,0 +1,262 @@
+/* Container global */
+.home-slider-container {
+    /* width: 100%; */
+    height: calc(100vh - 140px); /* Ajuste selon la taille header/footer */
+    min-height: 500px;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* --- CARROUSEL WRAPPER --- */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* --- SLIDES GENERIQUES --- */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* --- STYLES PAR SLIDE --- */
+
+/* 1. Kyrgios (Bleu) */
+.bg-blue {
+    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+    color: white;
+    width: 100%;
+    opacity: 0.4;
+    background-size: cover; 
+    background-image: url(C:\Users\ben-ali.aboudou\Downloads\ReactWeb\tennis-clash-deck\public\assets\kyrgios.jpg);
+}
+.kyrios-layout h1 {
+    font-size: 2.5rem;
+    font-style: italic;
+    margin: 10px 0;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+.kyrios-layout h2 {
+    color: #ffcc00;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.badge {
+    background: rgba(255,255,255,0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.big-char {
+    height: 200px; /* Ajuste selon ton image */
+    filter: drop-shadow(0 10px 10px rgba(0,0,0,0.5));
+}
+/* Cercles décoratifs */
+.circle {
+    position: absolute;
+    border: 50px solid rgba(255,255,255,0.05);
+    border-radius: 50%;
+    z-index: 0;
+}
+.c1 { width: 400px; height: 400px; top: -100px; left: -100px; }
+.c2 { width: 600px; height: 600px; bottom: -200px; right: -200px; }
+
+
+/* 2. Legends (Blanc/Gris) */
+.bg-white {
+    /* background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%); */
+    background-image: url(C:\Users\ben-ali.aboudou\Downloads\ReactWeb\tennis-clash-deck\public\assets\legends.png);
+    width: 100%;
+    background-size: cover; 
+    /* background-position: center;  */
+    /* background-repeat: no-repeat; */
+    /* height: 100vh; */
+    /* color: white; */
+    /* background: #f4f4f4; */
+    color: #333;
+}
+.legends-layout h1 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 30px;
+}
+.cards-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.mini-card {
+    width: 100px;
+    transition: transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+.tilt-left { transform: rotate(-10deg) translateY(10px); }
+.tilt-right { transform: rotate(10deg) translateY(10px); }
+.center { transform: scale(1.2); z-index: 2; }
+
+
+/* 3. Tournament (Sombre/Stade) */
+.bg-dark {
+    /* background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1530263629471-c068800366eb?q=80&w=2070&auto=format&fit=crop'); */
+    background-image: url(C:\Users\ben-ali.aboudou\Downloads\ReactWeb\tennis-clash-deck\public\assets\ao-open.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+.ao-logo-big {
+    font-size: 8rem;
+    font-weight: 900;
+    line-height: 0.8;
+    opacity: 0.3;
+    position: absolute;
+    top: 10%;
+}
+.tour-layout h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    z-index: 2;
+    margin: 0;
+}
+.date-badge {
+    background: #00c6ff;
+    color: #000;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+/* --- SLIDE CHAMPIONS --- */
+.bg-champions {
+    /* background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%); */
+    color: white;
+    width: 100%;
+    opacity: 0.4;
+    background-size: cover; 
+    background-image: url(C:\Users\ben-ali.aboudou\Downloads\ReactWeb\tennis-clash-deck\public\assets\cover.jpg);
+}
+
+
+/* --- BOUTONS (CTA) --- */
+.btn-slider {
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: transform 0.2s;
+    z-index: 10;
+}
+.btn-slider:hover { transform: scale(1.05); }
+
+.primary {
+    background: linear-gradient(to right, #ff9900, #ffcc00);
+    color: #222;
+    border: 2px solid white;
+}
+.secondary {
+    background: #333;
+    color: white;
+}
+.accent {
+    background: transparent;
+    border: 2px solid #00c6ff;
+    color: #00c6ff;
+}
+.accent:hover {
+    background: #00c6ff;
+    color: white;
+}
+
+/* --- NAVIGATION (Flèches et Points) --- */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.3);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+}
+.arrow:hover { background: rgba(0,0,0,0.6); }
+.left { left: 20px; }
+.right { right: 20px; }
+
+.dots-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: white;
+    transform: scale(1.2);
+}
+
+/* --- QUICK ACCESS (Texte en bas) --- */
+.quick-access {
+    background: #111;
+    color: #777;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+img{
+    width: 10%;
+    height: 5%;
+}

@@ -1,0 +1,21 @@
+.choice-category-games-clubs{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+.choice-category-games-clubs button{
+    background-color: gold;
+    color: #020202;
+    border-radius: 10px;
+    border: none;
+    font-size: 22px;
+    padding: 1rem;
+}
+
+@media (max-width: 550px) {
+    .choice-category-games-clubs{
+        flex-direction: column;
+    }
+}

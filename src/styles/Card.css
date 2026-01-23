@@ -1,0 +1,211 @@
+.cards-container .cards-name button, .cards-container .cards-character .cards-character-category button{
+    background-color: gold;
+    color: #020202;
+    border-radius: 10px;
+    border: none;
+    font-size: 22px;
+    padding: 1rem;
+}
+
+.cards-container .cards-name, .cards-container .cards-character .cards-character-category{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 910px) {
+    .cards-container .cards-name{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 610px) {
+    .cards-container .cards-name{
+        /* display: grid; */
+        grid-template-columns: repeat(2,1fr);
+        /* gap: 20px; */
+        /* margin-bottom: 2rem; */
+    }
+}
+
+@media (max-width: 350px) {
+    .cards-container .cards-name, .cards-container .cards-character .cards-character-category{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 2rem;
+    }
+}
+
+.cards-container .cards-name .cards-character .cards-character-legends{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.cards-container .cards-character .cards-character-legends div img, .cards-container .cards-character .cards-character-champions div img{ 
+    width: 50%;
+    height: auto;
+}
+
+.cards-container .cards-character .cards-character-legends {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: end;
+}
+
+.cards-container .cards-character .cards-character-legends div p, .cards-container .cards-character .cards-character-champions div p{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+@media (max-width: 800px) {
+    .cards-container .cards-character .cards-character-legends {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .cards-container .cards-character .cards-character-legends {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.cards-container .cards-character .cards-character-champions {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: end;
+}
+
+@media (max-width: 900px) {
+    .cards-container .cards-character .cards-character-champions {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .cards-container .cards-character .cards-character-champions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.cards-container .cards-character .cards-character-legends div, .cards-container .cards-character .cards-character-champions div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cards-container .cards-racket, .cards-container .cards-grip, .cards-container .cards-shoe, .cards-container .cards-wristband, .cards-container .select-cards-categories-nutrition-cards, .cards-container .select-cards-categories-workout-cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+@media (max-width: 730px) {
+    .cards-container .cards-racket, .cards-container .cards-grip, .cards-container .cards-shoe, .cards-container .cards-wristband, .cards-container .select-cards-categories-nutrition-cards, .cards-container .select-cards-categories-workout-cards {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 510px) {
+    .cards-container .cards-racket, .cards-container .cards-grip, .cards-container .cards-shoe, .cards-container .cards-wristband, .cards-container .select-cards-categories-nutrition-cards, .cards-container .select-cards-categories-workout-cards {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .cards-container .cards-racket div img, .cards-container .cards-grip div img, .cards-container .cards-shoe div img, .cards-container .cards-wristband div img, .cards-container .select-cards-categories-nutrition-cards div img, .cards-container .select-cards-categories-workout-cards div img{
+        width: 100%;
+    }
+}
+
+.cards-container .cards-racket div img, .cards-container .cards-grip div img, .cards-container .cards-shoe div img, .cards-container .cards-wristband div img, .cards-container .select-cards-categories-nutrition-cards div img, .cards-container .select-cards-categories-workout-cards div img{
+    width: 50%;
+    height: auto;
+}
+
+.cards-container .cards-racket div p, .cards-container .cards-grip div p, .cards-container .cards-shoe div p, .cards-container .cards-wristband div p, .cards-container .select-cards-categories-nutrition-cards div p, .cards-container .select-cards-categories-workout-cards div p{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.cards-container .cards-racket div, .cards-container .cards-grip div, .cards-container .cards-shoe div, .cards-container .cards-wristband div, .cards-container .select-cards-categories-nutrition-cards div, .cards-container .select-cards-categories-workout-cards div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.item-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.item-container .card {
+  display: inline-block;
+  width: 150px;
+  margin: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.item-container .card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.item-container .card p {
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  color:blue;
+}
+
+.item-container .infos-card{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.item-container .infos-card .nationality{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.item-container .infos-card .nationality img.flag{
+  width: 50%;
+  height: auto;
+}
+
+.item-container table{
+    margin: auto;
+    text-align: left;
+    vertical-align: center;
+}
+
+.item-container table, .item-container table td, .item-container table th{
+    padding: 5px;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.item-container table thead th, .item-container table tfoot th{
+    background-color: grey;
+}
