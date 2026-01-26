@@ -47,189 +47,192 @@ function HopeTable() {
     };
 
     return(
-        <div className="table-container">
-            <table className="hope">
-                <caption>Upgrade Table</caption>
-                <thead>
-                    <tr>
-                        <th>Level</th>
-                        <th>1</th>
-                        <th>2</th>
-                        <th>3</th>
-                        <th>4</th>
-                        <th>5</th>
-                        <th>6</th>
-                        <th>7</th>
-                        <th>8</th>
-                        <th>9</th>
-                        <th>10</th>
-                        <th>11</th>
-                        <th>12</th>
-                        <th>13</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Up Cards</td>
-                        <td></td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>8</td>
-                        <td>10</td>
-                        <td>20</td>
-                        <td>40</td>
-                        <td>60</td>
-                        <td>100</td>
-                        <td>200</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Price Upgrade</td>
-                        <td></td>
-                        <td>400</td>
-                        <td>1.4K</td>
-                        <td>3.2K</td>
-                        <td>6K</td>
-                        <td>11K</td>
-                        <td>17.2K</td>
-                        <td>26K</td>
-                        <td>36K</td>
-                        <td>52K</td>
-                        <td>66K</td>
-                        <td>170K</td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-            <table className="hope">
-                <caption>Skills Table</caption>
-                <thead>
-                    <tr>
-                        <th>Level</th>
-                        {[...Array(13)].map((_, i) => renderSkillCell(i + 1, i + 1, true))}
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Agility</td>
-                        {renderSkillCell(1, '4')}
-                        {renderSkillCell(2, '5')}
-                        {renderSkillCell(3, '6')}
-                        {renderSkillCell(4, '7')}
-                        {renderSkillCell(5, '8')}
-                        {renderSkillCell(6, '9')}
-                        {renderSkillCell(7, '11')}
-                        {renderSkillCell(8, '12')}
-                        {renderSkillCell(9, '13')}
-                        {renderSkillCell(10, '14')}
-                        {renderSkillCell(11, '15')}
-                        {renderSkillCell(12, '16')}
-                        {renderSkillCell(13, '17')}
-                    </tr>
-                    <tr>
-                        <td>Stamina</td>
-                        {renderSkillCell(1, '4')}
-                        {renderSkillCell(2, '4')}
-                        {renderSkillCell(3, '5')}
-                        {renderSkillCell(4, '5')}
-                        {renderSkillCell(5, '6')}
-                        {renderSkillCell(6, '6')}
-                        {renderSkillCell(7, '7')}
-                        {renderSkillCell(8, '8')}
-                        {renderSkillCell(9, '8')}
-                        {renderSkillCell(10, '9')}
-                        {renderSkillCell(11, '9')}
-                        {renderSkillCell(12, '10')}
-                        {renderSkillCell(13, '11')}
-                    </tr>
-                    <tr>
-                        <td>Serve</td>
-                        {renderSkillCell(1, '4')}
-                        {renderSkillCell(2, '5')}
-                        {renderSkillCell(3, '6')}
-                        {renderSkillCell(4, '7')}
-                        {renderSkillCell(5, '8')}
-                        {renderSkillCell(6, '9')}
-                        {renderSkillCell(7, '10')}
-                        {renderSkillCell(8, '11')}
-                        {renderSkillCell(9, '12')}
-                        {renderSkillCell(10, '13')}
-                        {renderSkillCell(11, '14')}
-                        {renderSkillCell(12, '15')}
-                        {renderSkillCell(13, '16')}
-                    </tr>
-                    <tr>
-                        <td>Volley</td>
-                        {renderSkillCell(1, '2')}
-                        {renderSkillCell(2, '3')}
-                        {renderSkillCell(3, '4')}
-                        {renderSkillCell(4, '4')}
-                        {renderSkillCell(5, '5')}
-                        {renderSkillCell(6, '6')}
-                        {renderSkillCell(7, '6')}
-                        {renderSkillCell(8, '7')}
-                        {renderSkillCell(9, '8')}
-                        {renderSkillCell(10, '8')}
-                        {renderSkillCell(11, '9')}
-                        {renderSkillCell(12, '10')}
-                        {renderSkillCell(13, '11')}
-                        {renderSkillCell(14, '12')}
-                    </tr>
-                    <tr>
-                        <td>Forehand</td>
-                        {renderSkillCell(1, '8')}
-                        {renderSkillCell(2, '9')}
-                        {renderSkillCell(3, '10')}
-                        {renderSkillCell(4, '11')}
-                        {renderSkillCell(5, '12')}
-                        {renderSkillCell(6, '13')}
-                        {renderSkillCell(7, '16')}
-                        {renderSkillCell(8, '18')}
-                        {renderSkillCell(9, '19')}
-                        {renderSkillCell(10, '20')}
-                        {renderSkillCell(11, '21')}
-                        {renderSkillCell(12, '22')}
-                        {renderSkillCell(13, '23')}
-                    </tr>
-                    <tr>
-                        <td>Backhand</td>
-                        {renderSkillCell(1, '5')}
-                        {renderSkillCell(2, '6')}
-                        {renderSkillCell(3, '7')}
-                        {renderSkillCell(4, '8')}
-                        {renderSkillCell(5, '9')}
-                        {renderSkillCell(6, '10')}
-                        {renderSkillCell(7, '11')}
-                        {renderSkillCell(8, '12')}
-                        {renderSkillCell(9, '13')}
-                        {renderSkillCell(10, '14')}
-                        {renderSkillCell(11, '15')}
-                        {renderSkillCell(12, '16')}
-                        {renderSkillCell(13, '17')}
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th>Total Power</th>
-                        {renderSkillCell(1, '27', true)}
-                        {renderSkillCell(2, '32', true)}
-                        {renderSkillCell(3, '38', true)}
-                        {renderSkillCell(4, '42', true)}
-                        {renderSkillCell(5, '48', true)}
-                        {renderSkillCell(6, '53', true)}
-                        {renderSkillCell(7, '61', true)}
-                        {renderSkillCell(8, '68', true)}
-                        {renderSkillCell(9, '73', true)}
-                        {renderSkillCell(10, '78', true)}
-                        {renderSkillCell(11, '83', true)}
-                        {renderSkillCell(12, '89', true)}
-                        {renderSkillCell(13, '95', true)}
-                    </tr>
-                </tfoot>
-            </table>
+        <div className="table-container-scrollable">
+            <div className="table-container">
+                <table className="hope">
+                    <caption>Upgrade Table</caption>
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                            <th>11</th>
+                            <th>12</th>
+                            <th>13</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Up Cards</td>
+                            <td></td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>8</td>
+                            <td>10</td>
+                            <td>20</td>
+                            <td>40</td>
+                            <td>60</td>
+                            <td>100</td>
+                            <td>200</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Price Upgrade</td>
+                            <td></td>
+                            <td>400</td>
+                            <td>1.4K</td>
+                            <td>3.2K</td>
+                            <td>6K</td>
+                            <td>11K</td>
+                            <td>17.2K</td>
+                            <td>26K</td>
+                            <td>36K</td>
+                            <td>52K</td>
+                            <td>66K</td>
+                            <td>170K</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            <div className="table-container">
+                <table className="hope">
+                    <caption>Skills Table</caption>
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            {[...Array(13)].map((_, i) => renderSkillCell(i + 1, i + 1, true))}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Agility</td>
+                            {renderSkillCell(1, '4')}
+                            {renderSkillCell(2, '5')}
+                            {renderSkillCell(3, '6')}
+                            {renderSkillCell(4, '7')}
+                            {renderSkillCell(5, '8')}
+                            {renderSkillCell(6, '9')}
+                            {renderSkillCell(7, '11')}
+                            {renderSkillCell(8, '12')}
+                            {renderSkillCell(9, '13')}
+                            {renderSkillCell(10, '14')}
+                            {renderSkillCell(11, '15')}
+                            {renderSkillCell(12, '16')}
+                            {renderSkillCell(13, '17')}
+                        </tr>
+                        <tr>
+                            <td>Stamina</td>
+                            {renderSkillCell(1, '4')}
+                            {renderSkillCell(2, '4')}
+                            {renderSkillCell(3, '5')}
+                            {renderSkillCell(4, '5')}
+                            {renderSkillCell(5, '6')}
+                            {renderSkillCell(6, '6')}
+                            {renderSkillCell(7, '7')}
+                            {renderSkillCell(8, '8')}
+                            {renderSkillCell(9, '8')}
+                            {renderSkillCell(10, '9')}
+                            {renderSkillCell(11, '9')}
+                            {renderSkillCell(12, '10')}
+                            {renderSkillCell(13, '11')}
+                        </tr>
+                        <tr>
+                            <td>Serve</td>
+                            {renderSkillCell(1, '4')}
+                            {renderSkillCell(2, '5')}
+                            {renderSkillCell(3, '6')}
+                            {renderSkillCell(4, '7')}
+                            {renderSkillCell(5, '8')}
+                            {renderSkillCell(6, '9')}
+                            {renderSkillCell(7, '10')}
+                            {renderSkillCell(8, '11')}
+                            {renderSkillCell(9, '12')}
+                            {renderSkillCell(10, '13')}
+                            {renderSkillCell(11, '14')}
+                            {renderSkillCell(12, '15')}
+                            {renderSkillCell(13, '16')}
+                        </tr>
+                        <tr>
+                            <td>Volley</td>
+                            {renderSkillCell(1, '2')}
+                            {renderSkillCell(2, '3')}
+                            {renderSkillCell(3, '4')}
+                            {renderSkillCell(4, '4')}
+                            {renderSkillCell(5, '5')}
+                            {renderSkillCell(6, '6')}
+                            {renderSkillCell(7, '6')}
+                            {renderSkillCell(8, '7')}
+                            {renderSkillCell(9, '8')}
+                            {renderSkillCell(10, '8')}
+                            {renderSkillCell(11, '9')}
+                            {renderSkillCell(12, '10')}
+                            {renderSkillCell(13, '11')}
+                        </tr>
+                        <tr>
+                            <td>Forehand</td>
+                            {renderSkillCell(1, '8')}
+                            {renderSkillCell(2, '9')}
+                            {renderSkillCell(3, '10')}
+                            {renderSkillCell(4, '11')}
+                            {renderSkillCell(5, '12')}
+                            {renderSkillCell(6, '13')}
+                            {renderSkillCell(7, '16')}
+                            {renderSkillCell(8, '18')}
+                            {renderSkillCell(9, '19')}
+                            {renderSkillCell(10, '20')}
+                            {renderSkillCell(11, '21')}
+                            {renderSkillCell(12, '22')}
+                            {renderSkillCell(13, '23')}
+                        </tr>
+                        <tr>
+                            <td>Backhand</td>
+                            {renderSkillCell(1, '5')}
+                            {renderSkillCell(2, '6')}
+                            {renderSkillCell(3, '7')}
+                            {renderSkillCell(4, '8')}
+                            {renderSkillCell(5, '9')}
+                            {renderSkillCell(6, '10')}
+                            {renderSkillCell(7, '11')}
+                            {renderSkillCell(8, '12')}
+                            {renderSkillCell(9, '13')}
+                            {renderSkillCell(10, '14')}
+                            {renderSkillCell(11, '15')}
+                            {renderSkillCell(12, '16')}
+                            {renderSkillCell(13, '17')}
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Total Power</th>
+                            {renderSkillCell(1, '27', true)}
+                            {renderSkillCell(2, '32', true)}
+                            {renderSkillCell(3, '38', true)}
+                            {renderSkillCell(4, '42', true)}
+                            {renderSkillCell(5, '48', true)}
+                            {renderSkillCell(6, '53', true)}
+                            {renderSkillCell(7, '61', true)}
+                            {renderSkillCell(8, '68', true)}
+                            {renderSkillCell(9, '73', true)}
+                            {renderSkillCell(10, '78', true)}
+                            {renderSkillCell(11, '83', true)}
+                            {renderSkillCell(12, '89', true)}
+                            {renderSkillCell(13, '95', true)}
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
     );
 }
 

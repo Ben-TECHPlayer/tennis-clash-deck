@@ -47,23 +47,33 @@
     gap: 3rem;
 }
 
-.cards-container .cards-character .cards-character-legends div img, .cards-container .cards-character .cards-character-champions div img{ 
-    width: 50%;
+.cards-container .cards-character .cards-character-legends div img{ 
+    width: 80%;
     height: auto;
 }
 
-.cards-container .cards-character .cards-character-legends {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    align-items: end;
+.cards-container .cards-character .cards-character-champions div img{ 
+    width: 140%;
+    height: auto;
+}
+
+
+.cards-container .cards-character .cards-character-legends, .cards-container .cards-character .cards-character-champions {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 4rem;
+    overflow-x: auto;
 }
 
 .cards-container .cards-character .cards-character-legends div p, .cards-container .cards-character .cards-character-champions div p{
     font-size: 1.1rem;
     font-weight: 500;
+    text-align: center;
+    padding: 10px;
 }
 
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
     .cards-container .cards-character .cards-character-legends {
         grid-template-columns: repeat(2,1fr);
     }
@@ -75,15 +85,15 @@
         flex-direction: column;
         align-items: center;
     }
-}
+} */
 
-.cards-container .cards-character .cards-character-champions {
+/* .cards-container .cards-character .cards-character-champions {
     display: grid;
     grid-template-columns: repeat(4,1fr);
     align-items: end;
-}
+} */
 
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
     .cards-container .cards-character .cards-character-champions {
         grid-template-columns: repeat(2,1fr);
     }
@@ -95,21 +105,24 @@
         flex-direction: column;
         align-items: center;
     }
-}
+} */
 
 .cards-container .cards-character .cards-character-legends div, .cards-container .cards-character .cards-character-champions div {
     display: flex;
     align-items: center;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .cards-container .cards-racket, .cards-container .cards-grip, .cards-container .cards-shoe, .cards-container .cards-wristband, .cards-container .select-cards-categories-nutrition-cards, .cards-container .select-cards-categories-workout-cards {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,1fr);
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    align-items: baseline;
+    overflow-x: auto;
 }
 
-@media (max-width: 730px) {
+/* @media (max-width: 730px) {
     .cards-container .cards-racket, .cards-container .cards-grip, .cards-container .cards-shoe, .cards-container .cards-wristband, .cards-container .select-cards-categories-nutrition-cards, .cards-container .select-cards-categories-workout-cards {
         grid-template-columns: repeat(2,1fr);
     }
@@ -125,22 +138,25 @@
     .cards-container .cards-racket div img, .cards-container .cards-grip div img, .cards-container .cards-shoe div img, .cards-container .cards-wristband div img, .cards-container .select-cards-categories-nutrition-cards div img, .cards-container .select-cards-categories-workout-cards div img{
         width: 100%;
     }
-}
+} */
 
 .cards-container .cards-racket div img, .cards-container .cards-grip div img, .cards-container .cards-shoe div img, .cards-container .cards-wristband div img, .cards-container .select-cards-categories-nutrition-cards div img, .cards-container .select-cards-categories-workout-cards div img{
-    width: 50%;
+    width: 100%;
     height: auto;
 }
 
 .cards-container .cards-racket div p, .cards-container .cards-grip div p, .cards-container .cards-shoe div p, .cards-container .cards-wristband div p, .cards-container .select-cards-categories-nutrition-cards div p, .cards-container .select-cards-categories-workout-cards div p{
     font-size: 1.1rem;
     font-weight: 500;
+    text-align: center;
+    padding: 10px;
 }
 
 .cards-container .cards-racket div, .cards-container .cards-grip div, .cards-container .cards-shoe div, .cards-container .cards-wristband div, .cards-container .select-cards-categories-nutrition-cards div, .cards-container .select-cards-categories-workout-cards div{
     display: flex;
     align-items: center;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .item-container{
@@ -149,6 +165,17 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-grow: 1;
+}
+
+@media (max-width: 850px) {
+    .item-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-container .card{
+        width: 250px;
+    }
 }
 
 .item-container .card {

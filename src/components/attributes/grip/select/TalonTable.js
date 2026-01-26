@@ -48,7 +48,8 @@ function TalonTable(){
         };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-talon">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -104,6 +105,8 @@ function TalonTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="the-talon">
                     <caption>Skills Table</caption>
                     <thead>
@@ -166,6 +169,7 @@ function TalonTable(){
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

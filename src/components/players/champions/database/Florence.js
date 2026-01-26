@@ -16,6 +16,7 @@ function Florence(){
                     </div>
                 </div>
             </div>
+            <div className="table-container-scrollable">
             <div className="table-container">
             <table className="florence">
                 <caption>Upgrade Table</caption>
@@ -72,6 +73,8 @@ function Florence(){
                     </tr>
                 </tbody>
             </table>
+            </div>
+            <div className="table-container">
             <table className="florence">
                 <caption>Skills Table</caption>
                 <thead>
@@ -241,6 +244,7 @@ function Florence(){
                     </tr>
                 </tfoot>
             </table>
+            </div>
             </div>
         </div>
     );

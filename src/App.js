@@ -5,7 +5,6 @@ import { LevelProvider } from './context/LevelContext';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-import SelectCard from './components/SelectCard';
 
 import Home from './pages/Home';
 import Card from './pages/Card';
@@ -106,13 +105,13 @@ import './styles/index.css';
 import './styles/Clubs.css';
 import './styles/Games.css';
 
-const styleDeFond = {
-  backgroundColor: 'snow'
-};
+// const styleDeFond = {
+//   backgroundColor: 'snow'
+// };
 
 function App() {
   return (
-    <div style={styleDeFond}>
+    <div>
       <LevelProvider>
         <Router>
           <div className="App">

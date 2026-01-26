@@ -16,6 +16,7 @@ function Luc(){
                     </div>
                 </div>
             </div>
+            <div className="table-container-scrollable">
             <div className="table-container">
             <table className="luc">
                 <caption>Upgrade Table</caption>
@@ -78,6 +79,8 @@ function Luc(){
                     </tr>
                 </tbody>
             </table>
+            </div>
+            <div className="table-container">
             <table className="luc">
                 <caption>Skills Table</caption>
                 <thead>
@@ -231,6 +234,7 @@ function Luc(){
                     </tr>
                 </tfoot>
             </table>
+            </div>
             </div>
         </div>
     );

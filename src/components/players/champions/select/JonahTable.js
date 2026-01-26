@@ -47,7 +47,8 @@ function JonahTable() {
     };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="jonah">
                     <caption>Jonah's Upgrade Skills</caption>
                     <thead>
@@ -103,6 +104,8 @@ function JonahTable() {
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="jonah">
                     <caption>Jonah's Skills Table</caption>
                     <thead>
@@ -229,6 +232,7 @@ function JonahTable() {
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

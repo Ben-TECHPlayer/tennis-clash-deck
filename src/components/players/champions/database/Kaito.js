@@ -16,6 +16,7 @@ function Kaito(){
                     </div>
                 </div>
             </div>
+            <div className="table-container-scrollable">
             <div className="table-container">
             <table className="kaito">
                 <caption>Upgrade Table</caption>
@@ -78,6 +79,8 @@ function Kaito(){
                     </tr>
                 </tbody>
             </table>
+            </div>
+            <div className="table-container">
             <table className="kaito">
                 <caption>Skills Table</caption>
                 <thead>
@@ -231,6 +234,7 @@ function Kaito(){
                     </tr>
                 </tfoot>
             </table>
+            </div>
             </div>
         </div>
     );

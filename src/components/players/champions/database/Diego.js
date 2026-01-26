@@ -16,6 +16,7 @@ function Diego(){
                     </div>
                 </div>
             </div>
+            <div className="table-container-scrollable">
             <div className="table-container">
             <table className="diego">
                 <caption>Upgrade Table</caption>
@@ -78,6 +79,8 @@ function Diego(){
                     </tr>
                 </tbody>
             </table>
+            </div>
+            <div className="table-container">
             <table className="diego">
                 <caption>Skills Table</caption>
                 <thead>
@@ -265,6 +268,7 @@ function Diego(){
                     </tr>
                 </tfoot>
             </table>
+            </div>
             </div>
         </div>
     );

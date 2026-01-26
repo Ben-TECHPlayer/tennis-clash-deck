@@ -48,7 +48,8 @@ function FeatherTable(){
         };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-feather">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -104,6 +105,8 @@ function FeatherTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="the-feather">
                     <caption>Skills Table</caption>
                     <thead>
@@ -150,6 +153,7 @@ function FeatherTable(){
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

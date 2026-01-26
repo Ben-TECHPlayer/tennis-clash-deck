@@ -47,7 +47,8 @@ function WeightLiftingTable() {
     };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="weight-lifting">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -109,6 +110,8 @@ function WeightLiftingTable() {
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="weight-lifting">
                     <caption>Skills Table</caption>
                     <thead>
@@ -176,7 +179,8 @@ function WeightLiftingTable() {
                         </tr>
                     </tfoot>
                 </table>
-            </div>         
+            </div>   
+        </div>      
     );
 }
 

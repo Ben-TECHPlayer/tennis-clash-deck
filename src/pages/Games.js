@@ -6,9 +6,9 @@ function Games() {
     return (
         <main>
             <div className="choice-category-games">
-                <button onClick={() => setSelectedCategoryGames("grand-tour")}>Grand Tour</button>
-                <button onClick={() => setSelectedCategoryGames("regular")}>Regular</button>
-                <button onClick={() => setSelectedCategoryGames("tournaments")}>Tournaments</button>
+                <button style={{ opacity: selectedCategoryGames === "regular" ? 1 : 0.6 }} onClick={() => setSelectedCategoryGames("regular")}>Regular</button>
+                <button style={{ opacity: selectedCategoryGames === "grand-tour" ? 1 : 0.6 }} onClick={() => setSelectedCategoryGames("grand-tour")}>Grand Tour</button>
+                <button style={{ opacity: selectedCategoryGames === "tournaments" ? 1 : 0.6 }} onClick={() => setSelectedCategoryGames("tournaments")}>Tournaments</button>
             </div>
 
             {selectedCategoryGames === "regular" && (

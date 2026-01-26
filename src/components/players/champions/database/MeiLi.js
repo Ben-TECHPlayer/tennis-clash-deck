@@ -16,6 +16,7 @@ function MeiLi(){
                     </div>
                 </div>
             </div>
+            <div className="table-container-scrollable">
             <div className="table-container">
             <table className="mei-li">
                 <caption>Upgrade Table</caption>
@@ -78,6 +79,8 @@ function MeiLi(){
                     </tr>
                 </tbody>
             </table>
+            </div>
+            <div className="table-container">
             <table className="mei-li">
                 <caption>Skills Table</caption>
                 <thead>
@@ -231,6 +234,7 @@ function MeiLi(){
                     </tr>
                 </tfoot>
             </table>
+            </div>
             </div>
         </div>
     );

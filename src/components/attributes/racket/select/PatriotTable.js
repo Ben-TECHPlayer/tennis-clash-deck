@@ -48,7 +48,8 @@ function PatriotTable(){
         };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-patriot">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -104,6 +105,8 @@ function PatriotTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="the-patriot">
                     <caption>Skills Table</caption>
                     <thead>
@@ -166,6 +169,7 @@ function PatriotTable(){
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

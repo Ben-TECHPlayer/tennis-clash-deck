@@ -48,135 +48,139 @@ function ForgeTable(){
         };
 
     return(
+        <div className="table-container-scrollable">
         <div className="table-container">
-                <table className="the-forge">
-                    <caption>Upgrade Table</caption>
-                    <thead>
-                        <tr>
-                            <th>Level</th>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
-                            <th>6</th>
-                            <th>7</th>
-                            <th>8</th>
-                            <th>9</th>
-                            <th>10</th>
-                            <th>11</th>
-                            <th>12</th>
-                            <th>13</th>
-                            <th>14</th>
-                            <th>15</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Up Cards</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>2</td>
-                            <td>4</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>40</td>
-                            <td>60</td>
-                            <td>100</td>
-                            <td>150</td>
-                            <td>300</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Price Upgrade</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>45.9k</td>
-                            <td>58.4k</td>
-                            <td>75k</td>
-                            <td>87.5k</td>
-                            <td>104.2k</td>
-                            <td>116.7k</td>
-                            <td>150k</td>
-                            <td>183.4k</td>
-                            <td>216.7k</td>
-                            <td>250k</td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table className="the-forge">
-                    <caption>Skills Table</caption>
-                    <thead>
-                        <tr>
-                            <th>Level</th>
-                            {[...Array(15)].map((_, index) => renderSkillCell(index + 1, index + 1, true))}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Forehand</td>
-                            {renderSkillCell(1, '')}
-                            {renderSkillCell(2, '')}
-                            {renderSkillCell(3, '')}
-                            {renderSkillCell(4, '6')}
-                            {renderSkillCell(5, '9')}
-                            {renderSkillCell(6, '9')}
-                            {renderSkillCell(7, '9')}
-                            {renderSkillCell(8, '9')}
-                            {renderSkillCell(9, '9')}
-                            {renderSkillCell(10, '10')}
-                            {renderSkillCell(11, '10')}
-                            {renderSkillCell(12, '11')}
-                            {renderSkillCell(13, '12')}
-                            {renderSkillCell(14, '12')}
-                            {renderSkillCell(15, '13')}
-                        </tr>
-                        <tr>
-                            <td>Backhand</td>
-                            {renderSkillCell(1, '')}
-                            {renderSkillCell(2, '')}
-                            {renderSkillCell(3, '')}
-                            {renderSkillCell(4, '18')}
-                            {renderSkillCell(5, '21')}
-                            {renderSkillCell(6, '22')}
-                            {renderSkillCell(7, '27')}
-                            {renderSkillCell(8, '30')}
-                            {renderSkillCell(9, '32')}
-                            {renderSkillCell(10, '35')}
-                            {renderSkillCell(11, '38')}
-                            {renderSkillCell(12, '41')}
-                            {renderSkillCell(13, '44')}
-                            {renderSkillCell(14, '47')}
-                            {renderSkillCell(15, '50')}
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>Total Power</th>
-                            {renderSkillCell(1, '', true)}
-                            {renderSkillCell(2, '', true)}
-                            {renderSkillCell(3, '', true)}
-                            {renderSkillCell(4, '24', true)}
-                            {renderSkillCell(5, '30', true)}
-                            {renderSkillCell(6, '31', true)}
-                            {renderSkillCell(7, '36', true)}
-                            {renderSkillCell(8, '39', true)}
-                            {renderSkillCell(9, '41', true)}
-                            {renderSkillCell(10, '45', true)}
-                            {renderSkillCell(11, '48', true)}
-                            {renderSkillCell(12, '52', true)}
-                            {renderSkillCell(13, '56', true)}
-                            {renderSkillCell(14, '59', true)}
-                            {renderSkillCell(15, '63', true)}
-                        </tr>
-                    </tfoot>
-                </table>
+            <table className="the-forge">
+                <caption>Upgrade Table</caption>
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>9</th>
+                        <th>10</th>
+                        <th>11</th>
+                        <th>12</th>
+                        <th>13</th>
+                        <th>14</th>
+                        <th>15</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Up Cards</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>40</td>
+                        <td>60</td>
+                        <td>100</td>
+                        <td>150</td>
+                        <td>300</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Price Upgrade</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>45.9k</td>
+                        <td>58.4k</td>
+                        <td>75k</td>
+                        <td>87.5k</td>
+                        <td>104.2k</td>
+                        <td>116.7k</td>
+                        <td>150k</td>
+                        <td>183.4k</td>
+                        <td>216.7k</td>
+                        <td>250k</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
             </div>
+            <div className="table-container">
+            <table className="the-forge">
+                <caption>Skills Table</caption>
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        {[...Array(15)].map((_, index) => renderSkillCell(index + 1, index + 1, true))}
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Forehand</td>
+                        {renderSkillCell(1, '')}
+                        {renderSkillCell(2, '')}
+                        {renderSkillCell(3, '')}
+                        {renderSkillCell(4, '6')}
+                        {renderSkillCell(5, '9')}
+                        {renderSkillCell(6, '9')}
+                        {renderSkillCell(7, '9')}
+                        {renderSkillCell(8, '9')}
+                        {renderSkillCell(9, '9')}
+                        {renderSkillCell(10, '10')}
+                        {renderSkillCell(11, '10')}
+                        {renderSkillCell(12, '11')}
+                        {renderSkillCell(13, '12')}
+                        {renderSkillCell(14, '12')}
+                        {renderSkillCell(15, '13')}
+                    </tr>
+                    <tr>
+                        <td>Backhand</td>
+                        {renderSkillCell(1, '')}
+                        {renderSkillCell(2, '')}
+                        {renderSkillCell(3, '')}
+                        {renderSkillCell(4, '18')}
+                        {renderSkillCell(5, '21')}
+                        {renderSkillCell(6, '22')}
+                        {renderSkillCell(7, '27')}
+                        {renderSkillCell(8, '30')}
+                        {renderSkillCell(9, '32')}
+                        {renderSkillCell(10, '35')}
+                        {renderSkillCell(11, '38')}
+                        {renderSkillCell(12, '41')}
+                        {renderSkillCell(13, '44')}
+                        {renderSkillCell(14, '47')}
+                        {renderSkillCell(15, '50')}
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Total Power</th>
+                        {renderSkillCell(1, '', true)}
+                        {renderSkillCell(2, '', true)}
+                        {renderSkillCell(3, '', true)}
+                        {renderSkillCell(4, '24', true)}
+                        {renderSkillCell(5, '30', true)}
+                        {renderSkillCell(6, '31', true)}
+                        {renderSkillCell(7, '36', true)}
+                        {renderSkillCell(8, '39', true)}
+                        {renderSkillCell(9, '41', true)}
+                        {renderSkillCell(10, '45', true)}
+                        {renderSkillCell(11, '48', true)}
+                        {renderSkillCell(12, '52', true)}
+                        {renderSkillCell(13, '56', true)}
+                        {renderSkillCell(14, '59', true)}
+                        {renderSkillCell(15, '63', true)}
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        </div>
     );
 }
 

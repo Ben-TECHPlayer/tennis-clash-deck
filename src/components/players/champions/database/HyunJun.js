@@ -16,6 +16,7 @@ function HyunJun(){
                     </div>
                 </div>
             </div>
+            <div className="table-container-scrollable">
             <div className="table-container">
             <table className="hyun-jun">
                 <caption>Upgrade Table</caption>
@@ -78,6 +79,8 @@ function HyunJun(){
                     </tr>
                 </tbody>
             </table>
+            </div>
+            <div className="table-container">
             <table className="hyun-jun">
                 <caption>Skills Table</caption>
                 <thead>
@@ -231,6 +234,7 @@ function HyunJun(){
                     </tr>
                 </tfoot>
             </table>
+            </div>
             </div>
         </div>
     );

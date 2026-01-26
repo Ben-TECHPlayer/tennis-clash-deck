@@ -48,7 +48,8 @@ function TacticalGripTable(){
         };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="tactical-grip">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -110,6 +111,8 @@ function TacticalGripTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="tactical-grip">
                     <caption>Skills Table</caption>
                     <thead>
@@ -178,6 +181,7 @@ function TacticalGripTable(){
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

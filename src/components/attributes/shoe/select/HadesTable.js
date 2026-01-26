@@ -48,7 +48,8 @@ function HadesTable(){
         };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-hades-treads">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -110,6 +111,8 @@ function HadesTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="the-hades-treads">
                     <caption>Skills Table</caption>
                     <thead>
@@ -160,6 +163,7 @@ function HadesTable(){
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

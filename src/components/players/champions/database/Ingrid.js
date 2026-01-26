@@ -16,6 +16,7 @@ function Ingrid(){
                     </div>
                 </div>
             </div>
+            <div className="table-container-scrollable">
             <div className="table-container">
             <table className="ingrid">
                 <caption>Upgrade Table</caption>
@@ -78,6 +79,8 @@ function Ingrid(){
                     </tr>
                 </tbody>
             </table>
+            </div>
+            <div className="table-container">
             <table className="ingrid">
                 <caption>Skills Table</caption>
                 <thead>
@@ -231,6 +234,7 @@ function Ingrid(){
                     </tr>
                 </tfoot>
             </table>
+            </div>
             </div>
         </div>
     );

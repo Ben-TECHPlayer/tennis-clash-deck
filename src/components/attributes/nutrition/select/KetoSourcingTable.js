@@ -48,7 +48,8 @@ function KetoSourcingTable(){
         };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="keto-sourcing">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -110,6 +111,8 @@ function KetoSourcingTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="keto-sourcing">
                     <caption>Skills Table</caption>
                     <thead>
@@ -160,7 +163,8 @@ function KetoSourcingTable(){
                         </tr>
                     </tfoot>
                 </table>
-            </div>                  
+            </div>    
+        </div>              
     );
 }
 

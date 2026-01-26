@@ -47,7 +47,8 @@ function EnduranceTable() {
     };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="endurance">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -103,6 +104,8 @@ function EnduranceTable() {
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="endurance">
                     <caption>Skills Table</caption>
                     <thead>
@@ -165,6 +168,7 @@ function EnduranceTable() {
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

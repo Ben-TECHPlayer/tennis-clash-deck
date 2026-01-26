@@ -48,7 +48,8 @@ function HunterTable(){
         };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-hunter">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -104,6 +105,8 @@ function HunterTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="the-hunter">
                     <caption>Skills Table</caption>
                     <thead>
@@ -166,6 +169,7 @@ function HunterTable(){
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

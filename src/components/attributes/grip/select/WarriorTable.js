@@ -48,7 +48,8 @@ function WarriorTable(){
         };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-warrior">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -104,6 +105,8 @@ function WarriorTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="the-warrior">
                     <caption>Skills Table</caption>
                     <thead>
@@ -166,6 +169,7 @@ function WarriorTable(){
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

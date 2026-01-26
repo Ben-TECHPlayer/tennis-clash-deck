@@ -16,6 +16,7 @@ function Viktoria(){
                     </div>
                 </div>
             </div>
+            <div className="table-container-scrollable">
             <div className="table-container">
             <table className="viktoria">
                 <caption>Upgrade Table</caption>
@@ -78,6 +79,8 @@ function Viktoria(){
                     </tr>
                 </tbody>
             </table>
+            </div>
+            <div className="table-container">
             <table className="viktoria">
                 <caption>Skills Table</caption>
                 <thead>
@@ -231,6 +234,7 @@ function Viktoria(){
                     </tr>
                 </tfoot>
             </table>
+            </div>
             </div>
         </div>
     );

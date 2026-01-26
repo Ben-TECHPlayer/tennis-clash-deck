@@ -48,7 +48,8 @@ function VeganDietTable() {
     };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="vegan-diet">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -104,6 +105,8 @@ function VeganDietTable() {
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="vegan-diet">
                     <caption>Skills Table</caption>
                     <thead>
@@ -165,7 +168,8 @@ function VeganDietTable() {
                         </tr>
                     </tfoot>
                 </table>
-            </div>  
+            </div> 
+        </div> 
     );
 }
 

@@ -47,7 +47,8 @@ function GladiatorTable() {
     };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-gladiator">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -109,6 +110,8 @@ function GladiatorTable() {
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="the-gladiator">
                     <caption>Skills Table</caption>
                     <thead>
@@ -159,6 +162,7 @@ function GladiatorTable() {
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

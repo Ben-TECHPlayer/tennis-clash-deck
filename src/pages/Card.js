@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Card.css';
 import SelectCard from '../components/SelectCard';
@@ -20,7 +20,10 @@ function Card() {
       <main>
         <h1>Cards Database</h1>
         <SelectCard setSelectedCardTable={handleCardClick} />
-      </main>
+        <p style={{marginTop: '20px', fontStyle: 'italic'}}>
+          Note: Missing data for some item statistics will be updated soon.
+        </p>
+        </main>
     );
 }
 

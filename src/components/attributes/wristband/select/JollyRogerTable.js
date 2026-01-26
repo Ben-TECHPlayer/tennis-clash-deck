@@ -47,7 +47,8 @@ function JollyRogerTable() {
     };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="jolly-roger">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -103,6 +104,8 @@ function JollyRogerTable() {
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="jolly-roger">
                     <caption>Skills Table</caption>
                     <thead>
@@ -164,7 +167,8 @@ function JollyRogerTable() {
                         </tr>
                     </tfoot>
                 </table>
-            </div>     
+            </div>  
+        </div>   
     );
 }
 

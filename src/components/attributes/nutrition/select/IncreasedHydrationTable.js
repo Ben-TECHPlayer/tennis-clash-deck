@@ -48,7 +48,8 @@ function IncreasedHydrationTable(){
         };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="increased-hydration">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -104,6 +105,8 @@ function IncreasedHydrationTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="increased-hydration">
                     <caption>Skills Table</caption>
                     <thead>
@@ -166,6 +169,7 @@ function IncreasedHydrationTable(){
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

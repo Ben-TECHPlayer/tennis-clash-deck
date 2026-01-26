@@ -48,7 +48,8 @@ function EagleTable(){
         };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-eagle">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -104,6 +105,8 @@ function EagleTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="the-eagle">
                     <caption>Skills Table</caption>
                     <thead>
@@ -166,6 +169,7 @@ function EagleTable(){
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

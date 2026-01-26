@@ -47,7 +47,8 @@ function MountainClimberTable() {
     };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="mountain-climber">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -109,6 +110,8 @@ function MountainClimberTable() {
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="mountain-climber">
                     <caption>Skills Table</caption>
                     <thead>
@@ -177,6 +180,7 @@ function MountainClimberTable() {
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

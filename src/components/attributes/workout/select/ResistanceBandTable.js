@@ -47,7 +47,8 @@ function ResistanceBandTable() {
     };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="resistance-band">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -109,6 +110,8 @@ function ResistanceBandTable() {
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="resistance-band">
                     <caption>Skills Table</caption>
                     <thead>
@@ -177,6 +180,7 @@ function ResistanceBandTable() {
                     </tfoot>
                 </table>
             </div> 
+        </div>
     );
 }
 

@@ -47,7 +47,8 @@ function PaulTable() {
     };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="paul">
                     <caption>Paul's Upgrade Table</caption>
                     <thead>
@@ -109,8 +110,10 @@ function PaulTable() {
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="paul">
-                    <caption>Paul's Upgrade Table</caption>
+                    <caption>Paul's Skills Table</caption>
                     <thead>
                         <tr>
                             <th>Level</th>
@@ -249,6 +252,7 @@ function PaulTable() {
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

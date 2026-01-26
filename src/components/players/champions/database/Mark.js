@@ -16,6 +16,7 @@ function Mark(){
                     </div>
                 </div>
             </div>
+            <div className="table-container-scrollable">
             <div className="table-container">
             <table className="mark">
                 <caption>Upgrade Table</caption>
@@ -78,6 +79,8 @@ function Mark(){
                     </tr>
                 </tbody>
             </table>
+            </div>
+            <div className="table-container">
             <table className="mark">
                 <caption>Skills Table</caption>
                 <thead>
@@ -231,6 +234,7 @@ function Mark(){
                     </tr>
                 </tfoot>
             </table>
+            </div>
             </div>
         </div>
     );

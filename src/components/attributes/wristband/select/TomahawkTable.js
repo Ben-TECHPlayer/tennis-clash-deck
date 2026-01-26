@@ -47,7 +47,8 @@ function TomahawkTable() {
     };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-tomahawk">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -103,6 +104,8 @@ function TomahawkTable() {
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="the-tomahawk">
                     <caption>Skills Table</caption>
                     <thead>
@@ -149,6 +152,7 @@ function TomahawkTable() {
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

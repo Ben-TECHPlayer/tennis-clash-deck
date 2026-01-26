@@ -48,7 +48,8 @@ function PiranhaTable(){
         };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-piranha">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -104,6 +105,8 @@ function PiranhaTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="the-piranha">
                     <caption>Skills Table</caption>
                     <thead>
@@ -165,7 +168,8 @@ function PiranhaTable(){
                         </tr>
                     </tfoot>
                 </table>
-            </div>          
+            </div>   
+        </div>       
     );
 }
 

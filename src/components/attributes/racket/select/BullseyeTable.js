@@ -48,7 +48,8 @@ function BullseyeTable(){
         };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-bullseye">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -110,6 +111,8 @@ function BullseyeTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="the-bullseye">
                     <caption>Skills Table</caption>
                     <thead>
@@ -160,6 +163,7 @@ function BullseyeTable(){
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

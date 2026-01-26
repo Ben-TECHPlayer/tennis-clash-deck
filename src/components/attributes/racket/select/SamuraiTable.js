@@ -48,7 +48,8 @@ function SamuraiTable(){
         };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-samurai">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -110,6 +111,8 @@ function SamuraiTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="the-samurai">
                     <caption>Skills Table</caption>
                     <thead>
@@ -178,6 +181,7 @@ function SamuraiTable(){
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

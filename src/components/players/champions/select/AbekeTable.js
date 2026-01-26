@@ -47,7 +47,8 @@ function AbekeTable() {
     };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="abeke">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -109,6 +110,8 @@ function AbekeTable() {
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="abeke">
                     <caption>Skills Table</caption>
                     <thead>
@@ -249,6 +252,7 @@ function AbekeTable() {
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

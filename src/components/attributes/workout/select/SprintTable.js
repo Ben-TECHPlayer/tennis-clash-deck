@@ -47,7 +47,8 @@ function SprintTable() {
     };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="sprint">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -103,6 +104,8 @@ function SprintTable() {
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="sprint">
                     <caption>Skills Table</caption>
                     <thead>
@@ -149,6 +152,7 @@ function SprintTable() {
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

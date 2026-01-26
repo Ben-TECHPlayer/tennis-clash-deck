@@ -48,7 +48,8 @@ function HammerTable(){
         };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-hammer">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -109,6 +110,8 @@ function HammerTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="the-hammer">
                     <caption>Skills Table</caption>
                     <thead>
@@ -177,6 +180,7 @@ function HammerTable(){
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

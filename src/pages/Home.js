@@ -7,17 +7,17 @@ function Home() {
 
     // Données des slides
     const slides = [
+        // {
+        //     id: 1,
+        //     type: "kyrgios",
+        //     title: "KYRGIOS IS BACK!!!",
+        //     subtitle: "GO TO PLAY WITH HIM!!!",
+        //     cta: "Let's go!!!",
+        //     link: "/card/players/legends/database/Kyrgios",
+        //     bgClass: "bg-blue"
+        // },
         {
             id: 1,
-            type: "kyrgios",
-            title: "KYRGIOS IS BACK!!!",
-            subtitle: "GO TO PLAY WITH HIM!!!",
-            cta: "Let's go!!!",
-            link: "/card/players/legends/database/Kyrgios",
-            bgClass: "bg-blue"
-        },
-        {
-            id: 2,
             type: "legends",
             title: "LEGENDS ARE HERE!!!",
             subtitle: "GO TO MEET OSAKA, KYRGIOS, AND MORE...",
@@ -26,7 +26,7 @@ function Home() {
             bgClass: "bg-white"
         },
         {
-            id: 3,
+            id: 2,
             type: "tournament",
             title: "AUSTRALIAN OPEN TOURNAMENT",
             subtitle: "JANUARY 22-26",
@@ -35,7 +35,7 @@ function Home() {
             bgClass: "bg-dark"
         },
         {
-            id: 4,
+            id: 3,
             type: "champions",
             title: "The champions are here!!!",
             subtitle: "GO TO PLAY ",
@@ -100,10 +100,7 @@ function Home() {
                                 <h1>{slide.title}</h1>
                                 <div className="cards-row">
                                     {/* On affiche quelques cartes miniatures */}
-                                    <img src={`${process.env.PUBLIC_URL}/assets/osaka.svg`} alt="Card" className="mini-card tilt-left"/>
-                                    <img src={`${process.env.PUBLIC_URL}/assets/osaka.svg`} alt="Card" className="mini-card center"/> {/* Remplace par Sabalenka si tu as */}
-                                    <img src={`${process.env.PUBLIC_URL}/assets/osaka.svg`} alt="Card" className="mini-card tilt-right"/> {/* Remplace par Paul si tu as */}
-                                </div>
+                                    </div>
                                 <p>{slide.subtitle}</p>
                                 <Link to={slide.link} className="btn-slider secondary">{slide.cta}</Link>
                             </div>
@@ -147,7 +144,7 @@ function Home() {
 
             {/* Section Bonus en dessous (optionnel) */}
             <div className="quick-access">
-                <p>Bienvenue dans l'arène ultime de Tennis Clash !</p>
+                <p>Welcome to Tennis Clash!</p>
             </div>
         </main>
     );

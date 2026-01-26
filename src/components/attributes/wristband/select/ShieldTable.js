@@ -47,7 +47,8 @@ function ShieldTable() {
     };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-shield">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -107,6 +108,8 @@ function ShieldTable() {
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="the-shield">
                     <caption>Skills Table</caption>
                     <thead>
@@ -175,6 +178,7 @@ function ShieldTable() {
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

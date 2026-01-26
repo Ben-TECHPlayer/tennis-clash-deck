@@ -47,7 +47,8 @@ function KoiTable() {
     };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-koi">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -109,6 +110,8 @@ function KoiTable() {
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="the-koi">
                     <caption>Skills Table</caption>
                     <thead>
@@ -177,6 +180,7 @@ function KoiTable() {
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

@@ -16,6 +16,7 @@ function Hope(){
                     </div>
                 </div>
             </div>
+            <div className="table-container-scrollable">
             <div className="table-container">
             <table className="hope">
                 <caption>Upgrade Table</caption>
@@ -76,6 +77,8 @@ function Hope(){
                     </tr>
                 </tbody>
             </table>
+            </div>
+            <div className="table-container">
             <table className="hope">
                 <caption>Skills Table</caption>
                 <thead>
@@ -247,6 +250,7 @@ function Hope(){
                     </tr>
                 </tfoot>
             </table>
+            </div>
             </div>
         </div>
     );

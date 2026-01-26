@@ -47,7 +47,8 @@ function KodiakTable() {
     };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-kodiak">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -109,6 +110,8 @@ function KodiakTable() {
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="the-kodiak">
                     <caption>Skills Table</caption>
                     <thead>
@@ -177,6 +180,7 @@ function KodiakTable() {
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

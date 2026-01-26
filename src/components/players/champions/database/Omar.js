@@ -16,6 +16,7 @@ function Omar(){
                     </div>
                 </div>
             </div>
+            <div className="table-container-scrollable">
             <div className="table-container">
             <table className="omar">
                 <caption>Upgrade Table</caption>
@@ -78,6 +79,8 @@ function Omar(){
                     </tr>
                 </tbody>
             </table>
+            </div>
+            <div className="table-container">
             <table className="omar">
                 <caption>Skills Table</caption>
                 <thead>
@@ -231,6 +234,7 @@ function Omar(){
                     </tr>
                 </tfoot>
             </table>
+            </div>
             </div>
         </div>
     );

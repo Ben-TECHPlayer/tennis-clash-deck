@@ -47,7 +47,8 @@ function RocketTable() {
     };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-rocket">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -164,7 +165,8 @@ function RocketTable() {
                         </tr>
                     </tfoot>
                 </table>
-            </div>                                  
+            </div>
+        </div>                                  
     );
 }
 

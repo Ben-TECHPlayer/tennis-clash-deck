@@ -48,7 +48,8 @@ function ZeusTable(){
         };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="zeus">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -110,6 +111,8 @@ function ZeusTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="zeus">
                     <caption>Skills Table</caption>
                     <thead>
@@ -178,6 +181,7 @@ function ZeusTable(){
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

@@ -48,7 +48,8 @@ function OutbackTable(){
         };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-outback">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -104,6 +105,8 @@ function OutbackTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="the-outback">
                     <caption>Skills Table</caption>
                     <thead>
@@ -166,6 +169,7 @@ function OutbackTable(){
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

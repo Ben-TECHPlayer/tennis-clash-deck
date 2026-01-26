@@ -48,7 +48,8 @@ function BallisticTable(){
         };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-ballistic">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -110,6 +111,8 @@ function BallisticTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="the-ballistic">
                     <caption>Skills Table</caption>
                     <thead>
@@ -177,7 +180,8 @@ function BallisticTable(){
                         </tr>
                     </tfoot>
                 </table>
-            </div>      
+            </div>  
+        </div>
     );
 }
 

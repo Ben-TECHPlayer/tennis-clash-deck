@@ -16,6 +16,7 @@ function Leo(){
                     </div>
                 </div>
             </div>
+            <div className="table-container-scrollable">
             <div className="table-container">
             <table className="leo">
                 <caption>Upgrade Table</caption>
@@ -72,6 +73,8 @@ function Leo(){
                     </tr>
                 </tbody>
             </table>
+            </div>
+            <div className="table-container">
             <table className="leo">
                 <caption>Skills Table</caption>
                 <thead>
@@ -209,6 +212,7 @@ function Leo(){
                     </tr>
                 </tfoot>
             </table>
+            </div>
             </div>
         </div>
     );

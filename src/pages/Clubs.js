@@ -6,9 +6,9 @@ function Clubs() {
     return (
         <main>
             <div className="choice-category-games-clubs">
-                <button onClick={() => setSelectedCategoryGamesClubs("rules")}>Rules</button>
-                <button onClick={() => setSelectedCategoryGamesClubs("league-clubs")}>League Clubs</button>
-                <button onClick={() => setSelectedCategoryGamesClubs("club-chelem")}>Club Chelem</button>
+                <button style={{ opacity: selectedCategoryGamesClubs === "rules" ? 1 : 0.6 }} onClick={() => setSelectedCategoryGamesClubs("rules")}>Rules</button>
+                <button style={{ opacity: selectedCategoryGamesClubs === "league-clubs" ? 1 : 0.6 }} onClick={() => setSelectedCategoryGamesClubs("league-clubs")}>League Clubs</button>
+                <button style={{ opacity: selectedCategoryGamesClubs === "club-chelem" ? 1 : 0.6 }} onClick={() => setSelectedCategoryGamesClubs("club-chelem")}>Club Chelem</button>
             </div>
 
             {selectedCategoryGamesClubs === "rules" && (

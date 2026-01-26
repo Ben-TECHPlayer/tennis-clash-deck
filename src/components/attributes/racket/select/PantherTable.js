@@ -48,7 +48,8 @@ function PantherTable(){
         };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-panther">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -104,6 +105,8 @@ function PantherTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="the-panther">
                     <thead>
                         <tr>
@@ -149,6 +152,7 @@ function PantherTable(){
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import '../styles/Lineup.css';
 import SelectCard from '../components/SelectCard';
 import ChosenLineup from '../components/ChosenLineup';
+import { LevelContext } from '../context/LevelContext';
 
 import OsakaTable from '../components/players/legends/select/OsakaTable';
+import KyrgiosTable from '../components/players/legends/select/KyrgiosTable';
 import PaoliniTable from '../components/players/legends/select/PaoliniTable';
 import SabalenkaTable from '../components/players/legends/select/SabalenkaTable';
 import PaulTable from '../components/players/legends/select/PaulTable';
-import KyrgiosTable from '../components/players/legends/select/KyrgiosTable';
 
 import JonahTable from '../components/players/champions/select/JonahTable';
 import HopeTable from '../components/players/champions/select/HopeTable';
@@ -88,11 +89,24 @@ import WeightLiftingTable from '../components/attributes/workout/select/WeightLi
 
 
 function Lineup() {
+    // ... dans ton composant ...
+    const { resetAllLevels } = useContext(LevelContext);
+
+    const handleReset = () => {
+        if (window.confirm("Tout effacer ?")) {
+            resetAllLevels("Are you sure you want to reset all cards to Level 0?");
+            setSelectedCardTable(null);
+        }
+    };
     const [selectedCardTable, setSelectedCardTable] = useState(null); 
+
     return (
         <main>
-            <h1>Lineups</h1>
-            <SelectCard setSelectedCardTable={setSelectedCardTable} />
+            <div className='header-lineup'>
+                <h1>Lineups</h1>
+                <button style={{color: 'red', float: 'right'}} onClick={handleReset}>🗑️ Reset All</button> 
+            </div>
+            <SelectCard setSelectedCardTable={setSelectedCardTable} selectedCardTable={selectedCardTable} />
             <div className="select-cards-container">
                 <div className="select-cards-character">
                     <div className="select-cards-character-legends-attributes">
@@ -207,8 +221,11 @@ function Lineup() {
                     </div>
                 </div>
             </div>
-            <ChosenLineup />            
-        </main>
+            <ChosenLineup /> 
+            <p style={{marginTop: '20px', fontStyle: 'italic'}}>
+                Note: Missing data for some item statistics will be updated soon.
+            </p>      
+        </main>        
     );
 }
 

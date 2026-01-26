@@ -48,7 +48,8 @@ function CarboloadTable(){
         };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="carboload">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -110,6 +111,8 @@ function CarboloadTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="table-container">
                 <table className="carboload">
                     <caption>Skills Table</caption>
                     <thead>
@@ -177,7 +180,8 @@ function CarboloadTable(){
                         </tr>
                     </tfoot>
                 </table>
-            </div>                             
+            </div> 
+        </div>                            
     );
 }
 
