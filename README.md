@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# 🎾 Tennis Clash - FInd your dream lineup
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Une application React avancée permettant aux joueurs de *Tennis Clash* de calculer et d'optimiser leur équipement ("Build") en fonction des niveaux de leurs cartes et des règles de tournoi.
 
-## Available Scripts
+![Aperçu de l'application](./public/assets/preview.png)
+*(Note : Pensez à ajouter une capture d'écran de votre site ici)*
 
-In the project directory, you can run:
+## ✨ Fonctionnalités
 
-### `npm start`
+Cette application résout le problème complexe du choix d'équipement parmi des centaines de combinaisons possibles.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* **Gestion des Cartes & Niveaux** : Sélectionnez vos objets (Raquettes, Grips, Chaussures, etc.) et définissez leur niveau actuel.
+* **Persistance des Données** : Utilisation de `Context API` pour conserver les choix de l'utilisateur lors de la navigation entre les pages.
+* **Calculateur de Lineup Intelligent** : Un algorithme récursif génère toutes les combinaisons possibles (produit cartésien) basées sur les items sélectionnés.
+* **Gestion des "Level Caps" (Plafonds)** :
+    * **Grand Tour** : Niveaux réels (1-15).
+    * **Regular** : Règle dynamique (Niveau du personnage + 2).
+    * **Tournaments** : Plafonds fixes (Rookie, Junior, Challenger, Master).
+* **Comparaison Dynamique** : Visualisez plusieurs configurations côte à côte et sélectionnez la meilleure pour voir les détails.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Stack Technique
 
-### `npm test`
+Le projet est construit avec une architecture moderne et modulaire :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **Framework** : [React.js](https://reactjs.org/)
+* **Langage** : JavaScript (ES6+)
+* **State Management** : React Context API (`LevelContext`)
+* **Performance** : Utilisation de `useMemo` pour optimiser les calculs lourds de combinaisons.
+* **Styling** : CSS3 (Flexbox/Grid)
 
-### `npm run build`
+## 📂 Structure du Projet
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+L'architecture suit les principes de séparation des responsabilités (SoC) et une organisation par domaine métier.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```text
+src/
+├── components/
+│   ├── attributes/         # Composants par type d'équipement (Grip, Shoe, etc.)
+│   ├── players/            # Gestion des personnages (Champions, Legends)
+│   ├── ChosenLineup.js     # Le cerveau : Algorithme de calcul et affichage des résultats
+│   ├── SelectCard.js       # Interface de sélection des cartes
+│   └── ...
+├── context/
+│   └── LevelContext.js     # État global de l'application
+├── data/
+│   └── cardData.js         # Base de données statique (Stats, Noms, Types)
+├── pages/                  # Vues principales (Home, Games, Lineup...)
+└── App.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
