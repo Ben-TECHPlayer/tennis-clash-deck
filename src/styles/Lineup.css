@@ -24,17 +24,18 @@ main table, main table td, main table th{
 main table thead th, main table tfoot th{
     background-color: grey;
 }
-.table-container-scrollable{
-    display: flex;
-    flex-direction: column-reverse;
+
+.chosen-lineup-scrollable{
+    overflow-x: auto;
 }
 
 .table-container-scrollable .table-container{
     overflow-x: auto;
 }
 
-.chosen-lineup-scrollable{
-    overflow-x: auto;
+.table-container-scrollable{
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 /* --- Ajout pour la sélection de colonne --- */
