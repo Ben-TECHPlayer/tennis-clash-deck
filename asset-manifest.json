@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/tennis-clash-deck/static/css/main.f862215b.css",
-    "main.js": "/tennis-clash-deck/static/js/main.5c1a2ba0.js",
+    "main.css": "/tennis-clash-deck/static/css/main.4b810e58.css",
+    "main.js": "/tennis-clash-deck/static/js/main.595a9b8e.js",
     "static/media/legends.png": "/tennis-clash-deck/static/media/legends.ad2e0c52c89caa091783.png",
     "static/media/ao-open.png": "/tennis-clash-deck/static/media/ao-open.50a041d614b985824bb8.png",
     "static/media/cover.jpg": "/tennis-clash-deck/static/media/cover.20f9a980a1b8a5ce49a3.jpg",
     "static/media/kyrgios.jpg": "/tennis-clash-deck/static/media/kyrgios.fc2686954648daa0757c.jpg",
     "index.html": "/tennis-clash-deck/index.html",
-    "main.f862215b.css.map": "/tennis-clash-deck/static/css/main.f862215b.css.map",
-    "main.5c1a2ba0.js.map": "/tennis-clash-deck/static/js/main.5c1a2ba0.js.map"
+    "main.4b810e58.css.map": "/tennis-clash-deck/static/css/main.4b810e58.css.map",
+    "main.595a9b8e.js.map": "/tennis-clash-deck/static/js/main.595a9b8e.js.map"
   },
   "entrypoints": [
-    "static/css/main.f862215b.css",
-    "static/js/main.5c1a2ba0.js"
+    "static/css/main.4b810e58.css",
+    "static/js/main.595a9b8e.js"
   ]
 }
