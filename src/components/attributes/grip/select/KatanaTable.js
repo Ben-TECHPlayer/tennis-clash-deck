@@ -48,7 +48,8 @@ function KatanaTable(){
         };
 
     return(
-        <div className="table-container">
+        <div className="table-container-scrollable">
+            <div className="table-container">
                 <table className="the-katana">
                     <caption>Upgrade Table</caption>
                     <thead>
@@ -110,6 +111,9 @@ function KatanaTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
+
+            <div className="table-container">
                 <table className="the-katana">
                     <caption>Skills Table</caption>
                     <thead>
@@ -178,6 +182,7 @@ function KatanaTable(){
                     </tfoot>
                 </table>
             </div>
+        </div>
     );
 }
 

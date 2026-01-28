@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 table{
@@ -69,7 +70,7 @@ table tfoot td.col-selected {
     border-right: 2px solid #4CAF50;
 }
 
-.choice-category-games-lineup button{
+.choice-category-games-lineup button, .choice-category-level-tournament-lineup button{
     background-color: gold;
     color: #020202;
     border-radius: 10px;
@@ -78,7 +79,12 @@ table tfoot td.col-selected {
     padding: 1rem;
 }
 
-.choice-category-games-lineup{
+.choice-category-level-tournament-lineup button{
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.choice-category-games-lineup, .choice-category-level-tournament-lineup{
     display: flex;
     flex-direction: row;
     gap: 20px;

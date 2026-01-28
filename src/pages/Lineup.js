@@ -104,7 +104,7 @@ function Lineup() {
         <main>
             <div className='header-lineup'>
                 <h1>Lineups</h1>
-                <button style={{color: 'red', float: 'right'}} onClick={handleReset}>🗑️ Reset All</button> 
+                <button style={{backgroundColor: 'red', border: 'none', padding: '10px 20px', borderRadius: '5px', color: 'white', float: 'right'}} onClick={handleReset}>🗑️ Reset All</button> 
             </div>
             <SelectCard setSelectedCardTable={setSelectedCardTable} selectedCardTable={selectedCardTable} />
             <div className="select-cards-container">

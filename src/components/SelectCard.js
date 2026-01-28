@@ -22,7 +22,7 @@ function SelectCard({ setSelectedCardTable, selectedCardTable }){
     };
 
     return(
-        <div className="cards-container">
+        <div className="cards-container" style={{marginTop: "2rem"}}>
             <div className="cards-name">
                 <button onClick={() => { setSelectedCategory("character"); setSelectedCharacterType("legends"); }} style={{ opacity: selectedCategory === "character" ? 1 : 0.6 }}>Character</button>
                 <button onClick={() => setSelectedCategory("racket")} style={{ opacity: selectedCategory === "racket" ? 1 : 0.6 }}>Racket</button>

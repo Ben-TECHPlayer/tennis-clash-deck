@@ -52,13 +52,12 @@
 /* --- STYLES PAR SLIDE --- */
 
 /* 1. Kyrgios (Bleu) */
-.bg-blue {
+/* .bg-blue {
     background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
     color: white;
     width: 100%;
-    /* opacity: 0.4; */
+    opacity: 0.4; 
     background-size: cover; 
-    background-image: url(C:\Users\ben-ali.aboudou\Downloads\ReactWeb\tennis-clash-deck\public\assets\kyrgios.jpg);
 }
 .kyrios-layout h1 {
     font-size: 2.5rem;
@@ -79,10 +78,9 @@
     text-transform: uppercase;
 }
 .big-char {
-    height: 200px; /* Ajuste selon ton image */
+    height: 200px; 
     filter: drop-shadow(0 10px 10px rgba(0,0,0,0.5));
 }
-/* Cercles décoratifs */
 .circle {
     position: absolute;
     border: 50px solid rgba(255,255,255,0.05);
@@ -90,17 +88,16 @@
     z-index: 0;
 }
 .c1 { width: 400px; height: 400px; top: -100px; left: -100px; }
-.c2 { width: 600px; height: 600px; bottom: -200px; right: -200px; }
+.c2 { width: 600px; height: 600px; bottom: -200px; right: -200px; } */
 
 
 /* 2. Legends (Blanc/Gris) */
 .bg-white {
     /* background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%); */
-    background-image: url(C:\Users\ben-ali.aboudou\Downloads\ReactWeb\tennis-clash-deck\public\assets\legends.png);
     width: 100%;
     background-size: cover; 
-    /* background-position: center;  */
-    /* background-repeat: no-repeat; */
+    background-position: center; 
+    background-repeat: no-repeat;
     /* height: 100vh; */
     color: white;
     /* background: #f4f4f4; */
@@ -131,8 +128,7 @@
 
 /* 3. Tournament (Sombre/Stade) */
 .bg-dark {
-    /* background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1530263629471-c068800366eb?q=80&w=2070&auto=format&fit=crop'); */
-    background-image: url(C:\Users\ben-ali.aboudou\Downloads\ReactWeb\tennis-clash-deck\public\assets\ao-open.png);
+    /* background-image: url(C:\Users\ben-ali.aboudou\Downloads\ReactWeb\tennis-clash-deck\public\assets\new-year-lunar.jpg); */
     background-size: cover;
     background-position: center;
     color: white;
@@ -167,7 +163,6 @@
     width: 100%;
     /* opacity: 0.4; */
     background-size: cover; 
-    background-image: url(C:\Users\ben-ali.aboudou\Downloads\ReactWeb\tennis-clash-deck\public\assets\cover.jpg);
 }
 
 

@@ -17,20 +17,46 @@ html {
   transition: ease-in 0.3s;
 }
 
-header .header-container .home a{
+/* header .header-container .home img{
     text-decoration: none;
     color: #007bff;
     text-align: center;
     font-size: 2em;
     font-weight: bold;
+} */
+
+.header-container .home{
+  flex: 0;
+}
+
+.header-container img{
+    width: 100px;
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 1rem 0 2rem;
-  flex-wrap: wrap;
+}
+
+@media (max-width: 250px) {
+  .header-container{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right-side{
+    margin-top: 2rem
+  }
+}
+
+.right-side{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  /* flex: 1; */
 }
 
 .menu {
