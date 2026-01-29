@@ -5,24 +5,13 @@ import '../styles/Home.css';
 function Home() {
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    // Données des slides
+    // Préparer les slides
     const slides = [
-        // {
-        //     id: 1,
-        //     type: "kyrgios",
-        //     title: "KYRGIOS IS BACK!!!",
-        //     subtitle: "GO TO PLAY WITH HIM!!!",
-        //     cta: "Let's go!!!",
-        //     link: "/card/players/legends/database/Kyrgios",
-        //     bgClass: "bg-blue"
-        // },
         {
             id: 1,
             type: "season-trends",
             title: "LUNAR NEW YEAR",
             subtitle: "JANUARY 26-FEBRUARY 9",
-        //     cta: "Attend in tournament",
-            // link: "/games",
             bgClass: "bg-dark"
         },
         {
@@ -63,7 +52,7 @@ function Home() {
         },
     ];
 
-    // Changement automatique de slide
+    // Mettre en place le chargement automatique du slide
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
@@ -71,7 +60,7 @@ function Home() {
         return () => clearInterval(timer);
     }, [slides.length]);
 
-    // Navigation manuelle
+    // Donner la possibilité aux utilisateurs de naviguer manuellement
     const nextSlide = () => {
         setCurrentSlide(currentSlide === slides.length - 1 ? 0 : currentSlide + 1);
     };
@@ -97,22 +86,17 @@ function Home() {
                         {/* CONTENU SPÉCIFIQUE PAR TYPE DE SLIDE */}
                         
                         
-                        {/* 3. SLIDE GRAND TOUR */}
+                        {/* 1. SLIDE SEASON TRENDS */}
                         {slide.type === "season-trends" && (
                             <div className="slide-content season-layout"
                             style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/new-year-lunar.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                             >
-                                {/* <div className="ao-logo-big">AO</div> */}
                                 <h1>{slide.title}</h1>
-                                {/* <div className="char-showcase">
-                                    <img src={`${process.env.PUBLIC_URL}/assets/new-year-lunar.jpg`} alt="Kyrgios" className="big-char" onError={(e) => e.target.style.display='none'}/>
-                                </div> */}
                                 <div className="date-badge">📅 December 29-February 9</div>
-                                {/* <Link to={slide.link} className="btn-slider accent">{slide.cta}</Link> */}
                             </div>
                         )}
                         
-                        {/* 3. SLIDE GRAND TOUR */}
+                        {/* 2. SLIDE GRAND TOUR */}
                         {slide.type === "grand-tour" && (
                             <div className="slide-content tour-layout"
                             style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/ao-open.png)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
@@ -124,6 +108,7 @@ function Home() {
                             </div>
                         )}
 
+                        {/* 3. SLIDE TOURNAMENT */}
                         {slide.type === "tournament" && (
                             <div className="slide-content tour-layout"
                             style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/ao-open.png)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
@@ -135,21 +120,18 @@ function Home() {
                             </div>
                         )}
 
-                        {/* 2. SLIDE LEGENDS */}
+                        {/* 4. SLIDE LEGENDS */}
                         {slide.type === "legends" && (
                             <div className="slide-content legends-layout"
                             style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/legends.png)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                             >
                                 <h1>{slide.title}</h1>
-                                <div className="cards-row">
-                                    {/* On affiche quelques cartes miniatures */}
-                                    </div>
                                 <p>{slide.subtitle}</p>
                                 <Link to={slide.link} className="btn-slider secondary">{slide.cta}</Link>
                             </div>
                         )}
 
-                        {/* 4. SLIDE CHAMPIONS */}
+                        {/* 5. SLIDE CHAMPIONS */}
                         {slide.type === "champions" && (
                             <div className="slide-content champions-layout"
                             style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/cover.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}

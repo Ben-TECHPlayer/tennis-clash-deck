@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import '../styles/Games.css';
 
 function Games() {
-    const [selectedCategoryGames, setSelectedCategoryGames] = useState("regular");
+    const [selectedCategoryGames, setSelectedCategoryGames] = useState("grand-tour");
     return (
         <main>
             <div className="choice-category-games">
-                <button style={{ opacity: selectedCategoryGames === "regular" ? 1 : 0.6 }} onClick={() => setSelectedCategoryGames("regular")}>Regular</button>
                 <button style={{ opacity: selectedCategoryGames === "grand-tour" ? 1 : 0.6 }} onClick={() => setSelectedCategoryGames("grand-tour")}>Grand Tour</button>
+                <button style={{ opacity: selectedCategoryGames === "regular" ? 1 : 0.6 }} onClick={() => setSelectedCategoryGames("regular")}>Regular</button>
                 <button style={{ opacity: selectedCategoryGames === "tournaments" ? 1 : 0.6 }} onClick={() => setSelectedCategoryGames("tournaments")}>Tournaments</button>
             </div>
 

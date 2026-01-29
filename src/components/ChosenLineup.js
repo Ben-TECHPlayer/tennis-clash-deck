@@ -231,7 +231,7 @@ export default function ChosenLineup() {
                 display: "flex",
                 alignItems: "center",
                 marginTop: "10px",
-                gap: "2rem",
+                gap: "1rem",
             }}>
                 <span style={{ fontWeight: "bold" }}>Level Cap</span>
 

@@ -93,15 +93,11 @@
 
 /* 2. Legends (Blanc/Gris) */
 .bg-white {
-    /* background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%); */
     width: 100%;
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
-    /* height: 100vh; */
     color: white;
-    /* background: #f4f4f4; */
-    /* color: #333; */
 }
 .legends-layout h1 {
     font-size: 2rem;
@@ -128,7 +124,6 @@
 
 /* 3. Tournament (Sombre/Stade) */
 .bg-dark {
-    /* background-image: url(C:\Users\ben-ali.aboudou\Downloads\ReactWeb\tennis-clash-deck\public\assets\new-year-lunar.jpg); */
     background-size: cover;
     background-position: center;
     color: white;
@@ -189,9 +184,9 @@
     color: white;
 }
 .accent {
-    background: transparent;
+    background: #00c6ff;
     border: 2px solid #00c6ff;
-    color: #00c6ff;
+    color: white;
 }
 .accent:hover {
     background: #00c6ff;

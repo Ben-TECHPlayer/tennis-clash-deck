@@ -1,5 +1,7 @@
 import React, { useState, useContext } from 'react';
 import '../styles/Lineup.css';
+import '../styles/SelectCard.css';
+import '../styles/Tableau.css';
 import SelectCard from '../components/SelectCard';
 import ChosenLineup from '../components/ChosenLineup';
 import { LevelContext } from '../context/LevelContext';
@@ -89,9 +91,11 @@ import WeightLiftingTable from '../components/attributes/workout/select/WeightLi
 
 
 function Lineup() {
-    // ... dans ton composant ...
+
+    // Réinitialiser les données
     const { resetAllLevels } = useContext(LevelContext);
 
+    // Demander à l'utilisateur de confirmer s'il veut réinitialiser les données
     const handleReset = () => {
         if (window.confirm("Tout effacer ?")) {
             resetAllLevels("Are you sure you want to reset all cards to Level 0?");
@@ -104,124 +108,100 @@ function Lineup() {
         <main>
             <div className='header-lineup'>
                 <h1>Lineups</h1>
-                <button style={{backgroundColor: 'red', border: 'none', padding: '10px 20px', borderRadius: '5px', color: 'white', float: 'right'}} onClick={handleReset}>🗑️ Reset All</button> 
+                <button style={{backgroundColor: 'red', border: 'none', padding: '10px 20px', borderRadius: '5px', color: 'white', float: 'right'}} onClick={handleReset}>Reset All</button> 
             </div>
+
+            {/* Afficher les cartes */}
             <SelectCard setSelectedCardTable={setSelectedCardTable} selectedCardTable={selectedCardTable} />
-            <div className="select-cards-container">
-                <div className="select-cards-character">
-                    <div className="select-cards-character-legends-attributes">
-                        {selectedCardTable === "osaka-table" && <OsakaTable/>}
-                        {selectedCardTable === "paul-table" && <PaulTable/>}
-                        {selectedCardTable === "sabalenka-table" && <SabalenkaTable/>}
-                        {selectedCardTable === "paolini-table" && <PaoliniTable/>}
-                        {selectedCardTable === "kyrgios-table" && <KyrgiosTable/>}
-                    </div>
-                    <div className="select-cards-character-champions-attributes">
-                        {selectedCardTable === "jonah-table" && <JonahTable/>}
-                        {selectedCardTable === "hope-table" && <HopeTable/>}
-                        {selectedCardTable === "florence-table" && <FlorenceTable/>}
-                        {selectedCardTable === "leo-table" && <LeoTable/>}
-                        {selectedCardTable === "viktoria-table" && <ViktoriaTable/>}
-                        {selectedCardTable === "kaito-table" && <KaitoTable/>}
-                        {selectedCardTable === "diana-table" && <DianaTable/>}
-                        {selectedCardTable === "anton-table" && <AntonTable/>}
-                        {selectedCardTable === "ingrid-table" && <IngridTable/>}
-                        {selectedCardTable === "diego-table" && <DiegoTable/>}
-                        {selectedCardTable === "hyunjun-table" && <HyunJunTable/>}
-                        {selectedCardTable === "mark-table" && <MarkTable/>}
-                        {selectedCardTable === "abeke-table" && <AbekeTable/>}
-                        {selectedCardTable === "meili-table" && <MeiLiTable/>}
-                        {selectedCardTable === "luc-table" && <LucTable/>}
-                        {selectedCardTable === "omar-table" && <OmarTable/>}
-                    </div>
-                    
-                </div>
-                <div className="select-cards-categories">
-                    <div className="select-cards-categories-racket">
-                        <div className="select-cards-categories-racket-cards-attributes">
-                            {selectedCardTable === "starter-racket-table" && <StarterRacketTable/>}
-                            {selectedCardTable === "eagle-table" && <EagleTable/>}
-                            {selectedCardTable === "patriot-table" && <PatriotTable/>}
-                            {selectedCardTable === "outback-table" && <OutbackTable/>}
-                            {selectedCardTable === "panther-table" && <PantherTable/>}
-                            {selectedCardTable === "samurai-table" && <SamuraiTable/>}
-                            {selectedCardTable === "hammer-table" && <HammerTable/>}
-                            {selectedCardTable === "bullseye-table" && <BullseyeTable/>}
-                            {selectedCardTable === "zeus-table" && <ZeusTable/>}
-                        </div>
-                        
-                    </div>
-                    <div className="select-cards-categories-grip">
-                        <div className="select-cards-categories-racket-cards-attributes">
-                            {selectedCardTable === "starter-grip-table" && <StarterGripTable/>}
-                            {selectedCardTable === "warrior-table" && <WarriorTable/>}
-                            {selectedCardTable === "talon-table" && <TalonTable/>}
-                            {selectedCardTable === "machete-table" && <MacheteTable/>}
-                            {selectedCardTable === "cobra-table" && <CobraTable/>}
-                            {selectedCardTable === "katana-table" && <KatanaTable/>}
-                            {selectedCardTable === "forge-table" && <ForgeTable/>}
-                            {selectedCardTable === "tactical-grip-table" && <TacticalGripTable/>}
-                            {selectedCardTable === "titan-table" && <TitanTable/>}
-                        </div>
-                    </div>
-                    <div className="select-cards-categories-shoe">
-                        <div className="select-cards-categories-shoe-cards-attributes">
-                            {selectedCardTable === "starter-shoe-table" && <StarterShoeTable/>}
-                            {selectedCardTable === "feather-table" && <FeatherTable/>}
-                            {selectedCardTable === "raptor-table" && <RaptorTable/>}
-                            {selectedCardTable === "hunter-table" && <HunterTable/>}
-                            {selectedCardTable === "piranha-table" && <PiranhaTable/>}
-                            {selectedCardTable === "shuriken-table" && <ShurikenTable/>}
-                            {selectedCardTable === "anvil-table" && <AnvilTable/>}
-                            {selectedCardTable === "ballistic-table" && <BallisticTable/>}
-                            {selectedCardTable === "hades-table" && <HadesTable/>}
-                        </div>
-                        
-                    </div>
-                    <div className="select-cards-categories-wristband">
-                        <div className="select-cards-categories-racket-cards-attributes">                           
-                            {selectedCardTable === "starter-band-table" && <StarterBandTable/>}
-                            {selectedCardTable === "tomahawk-table" && <TomahawkTable/>}
-                            {selectedCardTable === "rocket-table" && <RocketTable/>}
-                            {selectedCardTable === "jolly-roger-table" && <JollyRogerTable/>}
-                            {selectedCardTable === "macaw-table" && <MacawTable/>}
-                            {selectedCardTable === "koi-table" && <KoiTable/>}
-                            {selectedCardTable === "kodiak-table" && <KodiakTable/>}
-                            {selectedCardTable === "gladiator-table" && <GladiatorTable/>}
-                            {selectedCardTable === "shield-table" && <ShieldTable/>}
-                        </div>
-                        
-                    </div>
-                    <div className="select-cards-categories-nutrition">
-                        <div className="select-cards-categories-nutrition-cards-attributes">
-                            {selectedCardTable === "starter-protein-table" && <StarterProteinTable/>}
-                            {selectedCardTable === "lean-protein-table" && <LeanProteinTable/>}
-                            {selectedCardTable === "increased-hydration-table" && <IncreasedHydrationTable/>}
-                            {selectedCardTable === "macrobiotic-table" && <MacrobioticTable/>}
-                            {selectedCardTable === "vegan-diet-table" && <VeganDietTable/>}
-                            {selectedCardTable === "keto-sourcing-table" && <KetoSourcingTable/>}
-                            {selectedCardTable === "antioxidants-table" && <AntioxidantsTable/>}
-                            {selectedCardTable === "carboload-table" && <CarboloadTable/>}
-                            {selectedCardTable === "natural-energy-table" && <NaturalEnergyTable/>}
-                        </div>
-                        
-                    </div>
-                    <div className="select-cards-categories-workout">
-                        <div className="select-cards-categories-shoe-workout-attributes">
-                            {selectedCardTable === "starter-training-table" && <StarterTrainingTable/>}
-                            {selectedCardTable === "endurance-table" && <EnduranceTable/>}
-                            {selectedCardTable === "sprint-table" && <SprintTable/>}
-                            {selectedCardTable === "plyometrics-table" && <PlyometricsTable/>}
-                            {selectedCardTable === "powerlifting-table" && <PowerliftingTable/>}
-                            {selectedCardTable === "weight-lifting-table" && <WeightLiftingTable/>}
-                            {selectedCardTable === "resistance-band-table" && <ResistanceBandTable/>}
-                            {selectedCardTable === "mountain-climber-table" && <MountainClimberTable/>}
-                            {selectedCardTable === "lunges-table" && <LungesTable/>}
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+            {/* Afficher les deux tableaux correspondants à la carte cliquée */}
+            {selectedCardTable === "osaka-table" && <OsakaTable/>}
+            {selectedCardTable === "paul-table" && <PaulTable/>}
+            {selectedCardTable === "sabalenka-table" && <SabalenkaTable/>}
+            {selectedCardTable === "paolini-table" && <PaoliniTable/>}
+            {selectedCardTable === "kyrgios-table" && <KyrgiosTable/>}
+        
+            {selectedCardTable === "jonah-table" && <JonahTable/>}
+            {selectedCardTable === "hope-table" && <HopeTable/>}
+            {selectedCardTable === "florence-table" && <FlorenceTable/>}
+            {selectedCardTable === "leo-table" && <LeoTable/>}
+            {selectedCardTable === "viktoria-table" && <ViktoriaTable/>}
+            {selectedCardTable === "kaito-table" && <KaitoTable/>}
+            {selectedCardTable === "diana-table" && <DianaTable/>}
+            {selectedCardTable === "anton-table" && <AntonTable/>}
+            {selectedCardTable === "ingrid-table" && <IngridTable/>}
+            {selectedCardTable === "diego-table" && <DiegoTable/>}
+            {selectedCardTable === "hyunjun-table" && <HyunJunTable/>}
+            {selectedCardTable === "mark-table" && <MarkTable/>}
+            {selectedCardTable === "abeke-table" && <AbekeTable/>}
+            {selectedCardTable === "meili-table" && <MeiLiTable/>}
+            {selectedCardTable === "luc-table" && <LucTable/>}
+            {selectedCardTable === "omar-table" && <OmarTable/>}
+        
+            {selectedCardTable === "starter-racket-table" && <StarterRacketTable/>}
+            {selectedCardTable === "eagle-table" && <EagleTable/>}
+            {selectedCardTable === "patriot-table" && <PatriotTable/>}
+            {selectedCardTable === "outback-table" && <OutbackTable/>}
+            {selectedCardTable === "panther-table" && <PantherTable/>}
+            {selectedCardTable === "samurai-table" && <SamuraiTable/>}
+            {selectedCardTable === "hammer-table" && <HammerTable/>}
+            {selectedCardTable === "bullseye-table" && <BullseyeTable/>}
+            {selectedCardTable === "zeus-table" && <ZeusTable/>}
+        
+            {selectedCardTable === "starter-grip-table" && <StarterGripTable/>}
+            {selectedCardTable === "warrior-table" && <WarriorTable/>}
+            {selectedCardTable === "talon-table" && <TalonTable/>}
+            {selectedCardTable === "machete-table" && <MacheteTable/>}
+            {selectedCardTable === "cobra-table" && <CobraTable/>}
+            {selectedCardTable === "katana-table" && <KatanaTable/>}
+            {selectedCardTable === "forge-table" && <ForgeTable/>}
+            {selectedCardTable === "tactical-grip-table" && <TacticalGripTable/>}
+            {selectedCardTable === "titan-table" && <TitanTable/>}
+
+            {selectedCardTable === "starter-shoe-table" && <StarterShoeTable/>}
+            {selectedCardTable === "feather-table" && <FeatherTable/>}
+            {selectedCardTable === "raptor-table" && <RaptorTable/>}
+            {selectedCardTable === "hunter-table" && <HunterTable/>}
+            {selectedCardTable === "piranha-table" && <PiranhaTable/>}
+            {selectedCardTable === "shuriken-table" && <ShurikenTable/>}
+            {selectedCardTable === "anvil-table" && <AnvilTable/>}
+            {selectedCardTable === "ballistic-table" && <BallisticTable/>}
+            {selectedCardTable === "hades-table" && <HadesTable/>}
+            
+            {selectedCardTable === "starter-band-table" && <StarterBandTable/>}
+            {selectedCardTable === "tomahawk-table" && <TomahawkTable/>}
+            {selectedCardTable === "rocket-table" && <RocketTable/>}
+            {selectedCardTable === "jolly-roger-table" && <JollyRogerTable/>}
+            {selectedCardTable === "macaw-table" && <MacawTable/>}
+            {selectedCardTable === "koi-table" && <KoiTable/>}
+            {selectedCardTable === "kodiak-table" && <KodiakTable/>}
+            {selectedCardTable === "gladiator-table" && <GladiatorTable/>}
+            {selectedCardTable === "shield-table" && <ShieldTable/>}
+        
+            {selectedCardTable === "starter-protein-table" && <StarterProteinTable/>}
+            {selectedCardTable === "lean-protein-table" && <LeanProteinTable/>}
+            {selectedCardTable === "increased-hydration-table" && <IncreasedHydrationTable/>}
+            {selectedCardTable === "macrobiotic-table" && <MacrobioticTable/>}
+            {selectedCardTable === "vegan-diet-table" && <VeganDietTable/>}
+            {selectedCardTable === "keto-sourcing-table" && <KetoSourcingTable/>}
+            {selectedCardTable === "antioxidants-table" && <AntioxidantsTable/>}
+            {selectedCardTable === "carboload-table" && <CarboloadTable/>}
+            {selectedCardTable === "natural-energy-table" && <NaturalEnergyTable/>}
+            
+            {selectedCardTable === "starter-training-table" && <StarterTrainingTable/>}
+            {selectedCardTable === "endurance-table" && <EnduranceTable/>}
+            {selectedCardTable === "sprint-table" && <SprintTable/>}
+            {selectedCardTable === "plyometrics-table" && <PlyometricsTable/>}
+            {selectedCardTable === "powerlifting-table" && <PowerliftingTable/>}
+            {selectedCardTable === "weight-lifting-table" && <WeightLiftingTable/>}
+            {selectedCardTable === "resistance-band-table" && <ResistanceBandTable/>}
+            {selectedCardTable === "mountain-climber-table" && <MountainClimberTable/>}
+            {selectedCardTable === "lunges-table" && <LungesTable/>}
+            
+            {/* Afficher le système de lineup consistant à composer notre lineup */}
             <ChosenLineup /> 
+
+            {/* Informer aux utilisateurs que certains données sont incomplets ou incorrects, et seront mises à jour dès que possible */}
             <p style={{marginTop: '20px', fontStyle: 'italic'}}>
                 Note: Missing data for some item statistics will be updated soon.
             </p>      
