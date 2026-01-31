@@ -395,6 +395,9 @@ export default function ChosenLineup() {
                     {['Character','Racket','Grip','Shoe','Wristband','Nutrition','Workout'].map(cat => {
                         const item = selected.items?.[cat] || { name: "-", level: 0, stats: {} };
                         const s = item.stats || { ag:0, st:0, se:0, vo:0, fo:0, ba:0 };
+
+                        const effectiveLevel = (levelCap && item.level > levelCap) ? levelCap : item.level;
+                        
                         return (
                             <tr key={cat}>
                                 <td>{cat}</td>
@@ -403,7 +406,7 @@ export default function ChosenLineup() {
                                         <>
                                             <strong>{item.name}</strong>
                                             <span style={{color:'#666', fontSize:'0.9em', marginLeft:'5px'}}>
-                                                (Lvl {item.level})
+                                                (Lvl {effectiveLevel})
                                             </span>
                                         </>
                                     ) : "-"}
