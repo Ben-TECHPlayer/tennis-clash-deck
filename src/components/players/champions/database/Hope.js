@@ -54,8 +54,6 @@ function Hope(){
                         <td>100</td>
                         <td>200</td>
                         <td>600</td>
-                        <td>1000</td>
-                        <td>2000</td>
                     </tr>
                     <tr>
                         <td>Price Upgrade</td>
@@ -72,8 +70,6 @@ function Hope(){
                         <td>66K</td>
                         <td>110K</td>
                         <td>250K</td>
-                        <td>800K</td>
-                        <td>2M</td>
                     </tr>
                 </tbody>
             </table>
@@ -131,7 +127,6 @@ function Hope(){
                         <td>9</td>
                         <td>10</td>
                         <td>11</td>
-                        <td>12</td>
                     </tr>
                     <tr>
                         <td>Serve</td>
@@ -164,7 +159,6 @@ function Hope(){
                         <td>9</td>
                         <td>10</td>
                         <td>11</td>
-                        <td>12</td>
                     </tr>
                     <tr>
                         <td>Forehand</td>
