@@ -49,7 +49,7 @@ function Paul(){
                                 <td>3</td>
                                 <td>4</td>
                                 <td>5</td>
-                                <td></td>
+                                <td>8</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -67,7 +67,7 @@ function Paul(){
                                 <td>11K</td>
                                 <td>36K</td>
                                 <td>52K</td>
-                                <td></td>
+                                <td>140K</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -111,7 +111,7 @@ function Paul(){
                                 <td>6</td>
                                 <td>8</td>
                                 <td>10</td>
-                                <td></td>
+                                <td>11</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -129,7 +129,7 @@ function Paul(){
                                 <td>6</td>
                                 <td>7</td>
                                 <td>8</td>
-                                <td></td>
+                                <td>9</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -147,7 +147,7 @@ function Paul(){
                                 <td>5</td>
                                 <td>6</td>
                                 <td>7</td>
-                                <td></td>
+                                <td>8</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -165,7 +165,7 @@ function Paul(){
                                 <td>6</td>
                                 <td>7</td>
                                 <td>8</td>
-                                <td></td>
+                                <td>9</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -183,7 +183,7 @@ function Paul(){
                                 <td>7</td>
                                 <td>8</td>
                                 <td>9</td>
-                                <td></td>
+                                <td>10</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -201,7 +201,7 @@ function Paul(){
                                 <td>7</td>
                                 <td>8</td>
                                 <td>9</td>
-                                <td></td>
+                                <td>10</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -221,7 +221,7 @@ function Paul(){
                                 <th>37</th>
                                 <th>44</th>
                                 <th>51</th>
-                                <th></th>
+                                <th>57</th>
                                 <th></th>
                                 <th></th>
                                 <th></th>

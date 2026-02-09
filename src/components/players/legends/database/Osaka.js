@@ -49,7 +49,7 @@ function Osaka(){
                                 <td>3</td>
                                 <td>4</td>
                                 <td>5</td>
-                                <td></td>
+                                <td>8</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -67,7 +67,7 @@ function Osaka(){
                                 <td>11K</td>
                                 <td>36K</td>
                                 <td>52K</td>
-                                <td></td>
+                                <td>140K</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -111,6 +111,7 @@ function Osaka(){
                                 <td>6</td>
                                 <td>7</td>
                                 <td>9</td>
+                                <td>10</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -118,13 +119,31 @@ function Osaka(){
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>23</td>
+                                <td>25</td>
                                 <td>26</td>
                             </tr>
                             <tr>
                                 <td>Stamina</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td>19</td>
+                            </tr>
+                            <tr>
+                                <td>Serve</td>
+                                <td>4</td>
                                 <td>5</td>
                                 <td>6</td>
                                 <td>7</td>
@@ -136,27 +155,8 @@ function Osaka(){
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>19</td>
-                            </tr>
-                            <tr>
-                                <td>Serve</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>6</td>
-                                <td>7</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>16</td>
+                                <td>17</td>
                                 <td>18</td>
                             </tr>
                             <tr>
@@ -165,6 +165,7 @@ function Osaka(){
                                 <td>3</td>
                                 <td>4</td>
                                 <td>5</td>
+                                <td>5</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -172,9 +173,8 @@ function Osaka(){
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>11</td>
+                                <td>12</td>
                                 <td>13</td>
                             </tr>
                             <tr>
@@ -183,6 +183,7 @@ function Osaka(){
                                 <td>9</td>
                                 <td>10</td>
                                 <td>12</td>
+                                <td>13</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -190,9 +191,8 @@ function Osaka(){
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>25</td>
+                                <td>27</td>
                                 <td>28</td>
                             </tr>
                             <tr>
@@ -201,6 +201,7 @@ function Osaka(){
                                 <td>7</td>
                                 <td>9</td>
                                 <td>10</td>
+                                <td>11</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -208,9 +209,8 @@ function Osaka(){
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>21</td>
+                                <td>23</td>
                                 <td>24</td>
                             </tr>
                         </tbody>
@@ -221,6 +221,7 @@ function Osaka(){
                                 <th>35</th>
                                 <th>42</th>
                                 <th>50</th>
+                                <th>55</th>
                                 <th></th>
                                 <th></th>
                                 <th></th>
@@ -228,9 +229,8 @@ function Osaka(){
                                 <th></th>
                                 <th></th>
                                 <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
+                                <th>113</th>
+                                <th>122</th>
                                 <th>128</th>
                             </tr>
                         </tfoot>

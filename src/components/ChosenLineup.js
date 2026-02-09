@@ -10,6 +10,9 @@ export default function ChosenLineup() {
   const [selectedLineupIdx, setSelectedLineupIdx] = useState(0);
   const [tournamentLevel, setTournamentLevel] = useState("master");
 
+  // --- NOUVEAU STATE POUR LE FILTRE PERSONNAGE ---
+  const [charFilter, setCharFilter] = useState("All");
+
   const [minStats, setMinStats] = useState({
     ag: "",
     st: "",
@@ -51,7 +54,6 @@ export default function ChosenLineup() {
     s.ag + s.st + s.se + s.vo + s.fo + s.ba;
 
   const getEffectiveLevel = (item) => {
-
     // 🔥 MODE TOURNAMENT → cap manuel
     if (gameMode === "tournament") {
         return Math.min(item.level, levelCap);
@@ -59,17 +61,13 @@ export default function ChosenLineup() {
 
     // 🔥 MODE REGULAR → AUTO
     if (gameMode === "regular") {
-
         if (item.category === "Character") {
-
             // Règle spéciale demandée :
             if (item.level >= 15) return 15;
             if (item.level === 14) return 14;
-
             // Sinon : +2
             return Math.min(item.level + 2, 15);
         }
-
         // Les équipements gardent leur niveau réel
         return item.level;
     }
@@ -80,7 +78,7 @@ export default function ChosenLineup() {
     }
 
     return item.level;
-};
+  };
 
 
   const bestItems = useMemo(() => {
@@ -134,7 +132,18 @@ export default function ChosenLineup() {
   const lineups = useMemo(() => {
     if (!bestItems.Character?.length) return [];
 
-    const chars = bestItems.Character.slice(0, 10);
+    // --- LOGIQUE MODIFIÉE POUR LE FILTRE PERSONNAGE ---
+    let charsSource = bestItems.Character || [];
+    
+    // Si un filtre est actif, on ne garde que ce personnage
+    if (charFilter !== "All") {
+        charsSource = charsSource.filter(c => c.name === charFilter);
+    }
+
+    // On garde ensuite les 10 meilleurs (du filtre ou du total) pour éviter les boucles infinies
+    const chars = charsSource.slice(0, 10);
+    // --------------------------------------------------
+
     const rackets = bestItems.Racket.slice(0, 10);
     const grips = bestItems.Grip.slice(0, 10);
     const shoes = bestItems.Shoe.slice(0, 5);
@@ -199,9 +208,17 @@ export default function ChosenLineup() {
 
     result.sort((a, b) => b.totalPower - a.totalPower);
     return result.slice(0, 200);
-  }, [bestItems, minStats]);
+  }, [bestItems, minStats, charFilter]); // Ajout de charFilter dans les dépendances
 
   const dv = (v) => (v > 0 ? v : "-");
+
+  // Récupération de la liste des personnages disponibles pour le dropdown
+  const availableCharacters = useMemo(() => {
+      if (!bestItems.Character) return [];
+      // On retourne juste les noms, triés alphabétiquement
+      return bestItems.Character.map(c => c.name).sort();
+  }, [bestItems]);
+
 
   if (!savedLevels || Object.keys(savedLevels).length === 0) {
     return (
@@ -225,6 +242,31 @@ export default function ChosenLineup() {
             <button style={{ opacity: gameMode === "regular" ? 1 : 0.6 }} onClick={() => setGameMode('regular')}>Regular</button>
             <button style={{ opacity: gameMode === "tournament" ? 1 : 0.6 }} onClick={() => setGameMode('tournament')}>Tournaments</button>
         </div>
+
+        {/* --- NOUVEAU : FILTRE PAR PERSONNAGE --- */}
+        <div style={{marginTop: "15px", display: "flex", alignItems: "center", gap: "10px", flexWrap: "wrap"}}>
+            <span style={{fontWeight: "bold"}}>Filter Character:</span>
+            <select 
+                value={charFilter} 
+                onChange={(e) => {
+                    setCharFilter(e.target.value);
+                    setSelectedLineupIdx(0); // Reset la sélection quand on change de filtre
+                }}
+                style={{
+                    padding: "5px",
+                    borderRadius: "5px",
+                    border: "1px solid #ccc",
+                    minWidth: "150px"
+                }}
+            >
+                <option value="All">All Characters</option>
+                {availableCharacters.map((name) => (
+                    <option key={name} value={name}>{name}</option>
+                ))}
+            </select>
+        </div>
+        {/* --------------------------------------- */}
+
 
         {gameMode === "grand-tour" && (
             <div style={{
@@ -273,7 +315,10 @@ export default function ChosenLineup() {
         {/* TABLEAU DES LINEUPS */}
         {lineups.length === 0 && (
         <div style={{padding:'20px', color:'red', border:'1px solid red', margin:'10px 0'}}>
-            No lineup matches your minimum stat requirements. Try lowering the filters.
+            {charFilter !== "All" 
+                ? `No lineup found for ${charFilter} with these stats.` 
+                : "No lineup matches your minimum stat requirements. Try lowering the filters."
+            }
         </div>
     )}
 

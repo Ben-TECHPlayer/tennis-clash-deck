@@ -79,8 +79,8 @@ function PaoliniTable() {
                             <td>3</td>
                             <td>4</td>
                             <td>5</td>
-                            <td></td>
-                            <td></td>
+                            <td>8</td>
+                            <td>10</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -97,8 +97,8 @@ function PaoliniTable() {
                             <td>11K</td>
                             <td>36K</td>
                             <td>52K</td>
-                            <td></td>
-                            <td></td>
+                            <td>140K</td>
+                            <td>180K</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -127,8 +127,8 @@ function PaoliniTable() {
                             {renderSkillCell(2, '9')}
                             {renderSkillCell(3, '11')}
                             {renderSkillCell(4, '13')}
-                            {renderSkillCell(5, '')}
-                            {renderSkillCell(6, '')}
+                            {renderSkillCell(5, '15')}
+                            {renderSkillCell(6, '17')}
                             {renderSkillCell(7, '')}
                             {renderSkillCell(8, '')}
                             {renderSkillCell(9, '')}
@@ -145,8 +145,8 @@ function PaoliniTable() {
                             {renderSkillCell(2, '8')}
                             {renderSkillCell(3, '9')}
                             {renderSkillCell(4, '10')}
-                            {renderSkillCell(5, '')}
-                            {renderSkillCell(6, '')}
+                            {renderSkillCell(5, '12')}
+                            {renderSkillCell(6, '13')}
                             {renderSkillCell(7, '')}
                             {renderSkillCell(8, '')}
                             {renderSkillCell(9, '')}
@@ -163,8 +163,8 @@ function PaoliniTable() {
                             {renderSkillCell(2, '3')}
                             {renderSkillCell(3, '4')}
                             {renderSkillCell(4, '5')}
-                            {renderSkillCell(5, '')}
-                            {renderSkillCell(6, '')}
+                            {renderSkillCell(5, '6')}
+                            {renderSkillCell(6, '6')}
                             {renderSkillCell(7, '')}
                             {renderSkillCell(8, '')}
                             {renderSkillCell(9, '')}
@@ -181,8 +181,8 @@ function PaoliniTable() {
                             {renderSkillCell(2, '2')}
                             {renderSkillCell(3, '3')}
                             {renderSkillCell(4, '4')}
-                            {renderSkillCell(5, '')}
-                            {renderSkillCell(6, '')}
+                            {renderSkillCell(5, '4')}
+                            {renderSkillCell(6, '5')}
                             {renderSkillCell(7, '')}
                             {renderSkillCell(8, '')}
                             {renderSkillCell(9, '')}
@@ -199,8 +199,8 @@ function PaoliniTable() {
                             {renderSkillCell(2, '6')}
                             {renderSkillCell(3, '7')}
                             {renderSkillCell(4, '9')}
-                            {renderSkillCell(5, '')}
-                            {renderSkillCell(6, '')}
+                            {renderSkillCell(5, '10')}
+                            {renderSkillCell(6, '11')}
                             {renderSkillCell(7, '')}
                             {renderSkillCell(8, '')}
                             {renderSkillCell(9, '')}
@@ -217,8 +217,8 @@ function PaoliniTable() {
                             {renderSkillCell(2, '3')}
                             {renderSkillCell(3, '4')}
                             {renderSkillCell(4, '5')}
-                            {renderSkillCell(5, '')}
-                            {renderSkillCell(6, '')}
+                            {renderSkillCell(5, '6')}
+                            {renderSkillCell(6, '7')}
                             {renderSkillCell(7, '')}
                             {renderSkillCell(8, '')}
                             {renderSkillCell(9, '')}
@@ -237,8 +237,8 @@ function PaoliniTable() {
                             {renderSkillCell(2, '31', true)}
                             {renderSkillCell(3, '38', true)}
                             {renderSkillCell(4, '46', true)}
-                            {renderSkillCell(5, '', true)}
-                            {renderSkillCell(6, '', true)}
+                            {renderSkillCell(5, '53', true)}
+                            {renderSkillCell(6, '59', true)}
                             {renderSkillCell(7, '', true)}
                             {renderSkillCell(8, '', true)}
                             {renderSkillCell(9, '', true)}

@@ -49,8 +49,8 @@ function Paolini(){
                                 <td>3</td>
                                 <td>4</td>
                                 <td>5</td>
-                                <td></td>
-                                <td></td>
+                                <td>8</td>
+                                <td>10</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -67,8 +67,8 @@ function Paolini(){
                                 <td>11K</td>
                                 <td>36K</td>
                                 <td>52K</td>
-                                <td></td>
-                                <td></td>
+                                <td>140K</td>
+                                <td>180K</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -111,8 +111,8 @@ function Paolini(){
                                 <td>9</td>
                                 <td>11</td>
                                 <td>13</td>
-                                <td></td>
-                                <td></td>
+                                <td>15</td>
+                                <td>17</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -129,8 +129,8 @@ function Paolini(){
                                 <td>8</td>
                                 <td>9</td>
                                 <td>10</td>
-                                <td></td>
-                                <td></td>
+                                <td>12</td>
+                                <td>13</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -147,8 +147,8 @@ function Paolini(){
                                 <td>3</td>
                                 <td>4</td>
                                 <td>5</td>
-                                <td></td>
-                                <td></td>
+                                <td>6</td>
+                                <td>6</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -165,8 +165,8 @@ function Paolini(){
                                 <td>2</td>
                                 <td>3</td>
                                 <td>4</td>
-                                <td></td>
-                                <td></td>
+                                <td>4</td>
+                                <td>5</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -183,8 +183,8 @@ function Paolini(){
                                 <td>6</td>
                                 <td>7</td>
                                 <td>9</td>
-                                <td></td>
-                                <td></td>
+                                <td>10</td>
+                                <td>11</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -201,8 +201,8 @@ function Paolini(){
                                 <td>3</td>
                                 <td>4</td>
                                 <td>5</td>
-                                <td></td>
-                                <td></td>
+                                <td>6</td>
+                                <td>7</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -221,8 +221,8 @@ function Paolini(){
                                 <th>31</th>
                                 <th>38</th>
                                 <th>46</th>
-                                <th></th>
-                                <th></th>
+                                <th>53</th>
+                                <th>59</th>
                                 <th></th>
                                 <th></th>
                                 <th></th>

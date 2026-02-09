@@ -130,11 +130,11 @@ function KyrgiosTable() {
                             {renderSkillCell(5, '11')}
                             {renderSkillCell(6, '13')}
                             {renderSkillCell(7, '15')}
-                            {renderSkillCell(8, '')}
-                            {renderSkillCell(9, '')}
+                            {renderSkillCell(8, '16')}
+                            {renderSkillCell(9, '18')}
                             {renderSkillCell(10, '')}
                             {renderSkillCell(11, '')}
-                            {renderSkillCell(12, '')}
+                            {renderSkillCell(12, '23')}
                             {renderSkillCell(13, '')}
                             {renderSkillCell(14, '')}
                             {renderSkillCell(15, '28')}
@@ -148,11 +148,11 @@ function KyrgiosTable() {
                             {renderSkillCell(5, '6')}
                             {renderSkillCell(6, '6')}
                             {renderSkillCell(7, '7')}
-                            {renderSkillCell(8, '')}
-                            {renderSkillCell(9, '')}
+                            {renderSkillCell(8, '8')}
+                            {renderSkillCell(9, '8')}
                             {renderSkillCell(10, '')}
                             {renderSkillCell(11, '')}
-                            {renderSkillCell(12, '')}
+                            {renderSkillCell(12, '10')}
                             {renderSkillCell(13, '')}
                             {renderSkillCell(14, '')}
                             {renderSkillCell(15, '12')}
@@ -166,11 +166,11 @@ function KyrgiosTable() {
                             {renderSkillCell(5, '13')}
                             {renderSkillCell(6, '14')}
                             {renderSkillCell(7, '15')}
-                            {renderSkillCell(8, '')}
-                            {renderSkillCell(9, '')}
+                            {renderSkillCell(8, '17')}
+                            {renderSkillCell(9, '18')}
                             {renderSkillCell(10, '')}
                             {renderSkillCell(11, '')}
-                            {renderSkillCell(12, '')}
+                            {renderSkillCell(12, '22')}
                             {renderSkillCell(13, '')}
                             {renderSkillCell(14, '')}
                             {renderSkillCell(15, '27')}
@@ -184,11 +184,11 @@ function KyrgiosTable() {
                             {renderSkillCell(5, '12')}
                             {renderSkillCell(6, '13')}
                             {renderSkillCell(7, '15')}
-                            {renderSkillCell(8, '')}
-                            {renderSkillCell(9, '')}
+                            {renderSkillCell(8, '16')}
+                            {renderSkillCell(9, '17')}
                             {renderSkillCell(10, '')}
                             {renderSkillCell(11, '')}
-                            {renderSkillCell(12, '')}
+                            {renderSkillCell(12, '21')}
                             {renderSkillCell(13, '')}
                             {renderSkillCell(14, '')}
                             {renderSkillCell(15, '25')}
@@ -202,11 +202,11 @@ function KyrgiosTable() {
                             {renderSkillCell(5, '12')}
                             {renderSkillCell(6, '13')}
                             {renderSkillCell(7, '15')}
-                            {renderSkillCell(8, '')}
-                            {renderSkillCell(9, '')}
+                            {renderSkillCell(8, '16')}
+                            {renderSkillCell(9, '17')}
                             {renderSkillCell(10, '')}
                             {renderSkillCell(11, '')}
-                            {renderSkillCell(12, '')}
+                            {renderSkillCell(12, '21')}
                             {renderSkillCell(13, '')}
                             {renderSkillCell(14, '')}
                             {renderSkillCell(15, '25')}
@@ -220,11 +220,11 @@ function KyrgiosTable() {
                             {renderSkillCell(5, '9')}
                             {renderSkillCell(6, '10')}
                             {renderSkillCell(7, '11')}
-                            {renderSkillCell(8, '')}
-                            {renderSkillCell(9, '')}
+                            {renderSkillCell(8, '12')}
+                            {renderSkillCell(9, '13')}
                             {renderSkillCell(10, '')}
                             {renderSkillCell(11, '')}
-                            {renderSkillCell(12, '')}
+                            {renderSkillCell(12, '16')}
                             {renderSkillCell(13, '')}
                             {renderSkillCell(14, '')}
                             {renderSkillCell(15, '19')}
@@ -240,11 +240,11 @@ function KyrgiosTable() {
                             {renderSkillCell(5, '63', true)}
                             {renderSkillCell(6, '69', true)}
                             {renderSkillCell(7, '78', true)}
-                            {renderSkillCell(8, '', true)}
-                            {renderSkillCell(9, '', true)}
+                            {renderSkillCell(8, '85', true)}
+                            {renderSkillCell(9, '91', true)}
                             {renderSkillCell(10, '', true)}
                             {renderSkillCell(11, '', true)}
-                            {renderSkillCell(12, '', true)}
+                            {renderSkillCell(12, '113', true)}
                             {renderSkillCell(13, '', true)}
                             {renderSkillCell(14, '', true)}
                             {renderSkillCell(15, '136', true)}

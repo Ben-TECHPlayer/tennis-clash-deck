@@ -92,7 +92,7 @@
 
 
 /* 2. Legends (Blanc/Gris) */
-.bg-white {
+.bg-legends {
     width: 100%;
     background-size: cover; 
     background-position: center; 
@@ -123,19 +123,19 @@
 
 
 /* 3. Tournament (Sombre/Stade) */
-.bg-dark {
+.bg-tour, .bg-season {
     background-size: cover;
     background-position: center;
     color: white;
 }
-.ao-logo-big {
+/* .ao-logo-big {
     font-size: 8rem;
     font-weight: 900;
     line-height: 0.8;
     opacity: 0.3;
     position: absolute;
     top: 10%;
-}
+} */
 .tour-layout h1 {
     font-size: 3rem;
     text-transform: uppercase;

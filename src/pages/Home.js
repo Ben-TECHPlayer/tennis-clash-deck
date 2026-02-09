@@ -10,27 +10,18 @@ function Home() {
         {
             id: 1,
             type: "season-trends",
-            title: "LUNAR NEW YEAR",
-            subtitle: "JANUARY 26-FEBRUARY 9",
-            bgClass: "bg-dark"
+            title: "CARNAVAL SEASON",
+            subtitle: "FEBRAURY 9-23",
+            bgClass: "bg-season"
         },
         {
             id: 2,
             type: "grand-tour",
-            title: "AUSTRALIAN TOUR",
-            subtitle: "DECEMBER 29-FEBRUARY 9",
+            title: "KYRGIOS OPEN",
+            subtitle: "FEBRAURY 9-23",
             link: "/games",
             cta: "Go to play!!!",
-            bgClass: "bg-dark",
-        },
-        {
-            id: 3,
-            type: "tournament",
-            title: "AUSTRALIAN OPEN",
-            subtitle: "JANUARY 29-FEBRUARY 2",
-            link: "/games",
-            cta: "Last chance for us to win this AO tournament!",
-            bgClass: "bg-dark",
+            bgClass: "bg-tour",
         },
         {
             id: 3,
@@ -39,7 +30,7 @@ function Home() {
             subtitle: "GO TO MEET OSAKA, KYRGIOS, AND MORE...",
             cta: "Go to Card Database",
             link: "/card",
-            bgClass: "bg-white"
+            bgClass: "bg-legends"
         },
         {
             id: 4,
@@ -89,36 +80,34 @@ function Home() {
                         {/* 1. SLIDE SEASON TRENDS */}
                         {slide.type === "season-trends" && (
                             <div className="slide-content season-layout"
-                            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/new-year-lunar.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/carnaval-season.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                             >
                                 <h1>{slide.title}</h1>
-                                <div className="date-badge">📅 December 29-February 9</div>
+                                <div className="date-badge">📅 February 9-23</div>
                             </div>
                         )}
                         
                         {/* 2. SLIDE GRAND TOUR */}
                         {slide.type === "grand-tour" && (
                             <div className="slide-content tour-layout"
-                            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/ao-open.png)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/kyrgios-open.png)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                             >
-                                <div className="ao-logo-big">AO</div>
                                 <h1>{slide.title}</h1>
-                                <div className="date-badge">📅 December 29-February 9</div>
+                                <div className="date-badge">📅 February 9-23</div>
                                 <Link to={slide.link} className="btn-slider accent">{slide.cta}</Link>
                             </div>
                         )}
 
                         {/* 3. SLIDE TOURNAMENT */}
-                        {slide.type === "tournament" && (
+                        {/* {slide.type === "tournament" && (
                             <div className="slide-content tour-layout"
-                            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/ao-open.png)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/carnaval-tournament.png)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                             >
-                                <div className="ao-logo-big">AO</div>
                                 <h1>{slide.title}</h1>
-                                <div className="date-badge">📅 January 29-February 2</div>
+                                <div className="date-badge">📅 February 12-16</div>
                                 <Link to={slide.link} className="btn-slider accent">{slide.cta}</Link>
                             </div>
-                        )}
+                        )} */}
 
                         {/* 4. SLIDE LEGENDS */}
                         {slide.type === "legends" && (

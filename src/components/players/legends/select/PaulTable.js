@@ -79,7 +79,7 @@ function PaulTable() {
                             <td>3</td>
                             <td>4</td>
                             <td>5</td>
-                            <td></td>
+                            <td>8</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -97,7 +97,7 @@ function PaulTable() {
                             <td>11K</td>
                             <td>36K</td>
                             <td>52K</td>
-                            <td></td>
+                            <td>140K</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -127,7 +127,7 @@ function PaulTable() {
                             {renderSkillCell(2, '6')}
                             {renderSkillCell(3, '8')}
                             {renderSkillCell(4, '10')}
-                            {renderSkillCell(5, '')}
+                            {renderSkillCell(5, '11')}
                             {renderSkillCell(6, '')}
                             {renderSkillCell(7, '')}
                             {renderSkillCell(8, '')}
@@ -145,7 +145,7 @@ function PaulTable() {
                             {renderSkillCell(2, '6')}
                             {renderSkillCell(3, '7')}
                             {renderSkillCell(4, '8')}
-                            {renderSkillCell(5, '')}
+                            {renderSkillCell(5, '9')}
                             {renderSkillCell(6, '')}
                             {renderSkillCell(7, '')}
                             {renderSkillCell(8, '')}
@@ -163,7 +163,7 @@ function PaulTable() {
                             {renderSkillCell(2, '5')}
                             {renderSkillCell(3, '6')}
                             {renderSkillCell(4, '7')}
-                            {renderSkillCell(5, '')}
+                            {renderSkillCell(5, '8')}
                             {renderSkillCell(6, '')}
                             {renderSkillCell(7, '')}
                             {renderSkillCell(8, '')}
@@ -181,7 +181,7 @@ function PaulTable() {
                             {renderSkillCell(2, '6')}
                             {renderSkillCell(3, '7')}
                             {renderSkillCell(4, '8')}
-                            {renderSkillCell(5, '')}
+                            {renderSkillCell(5, '9')}
                             {renderSkillCell(6, '')}
                             {renderSkillCell(7, '')}
                             {renderSkillCell(8, '')}
@@ -199,7 +199,7 @@ function PaulTable() {
                             {renderSkillCell(2, '7')}
                             {renderSkillCell(3, '8')}
                             {renderSkillCell(4, '9')}
-                            {renderSkillCell(5, '')}
+                            {renderSkillCell(5, '10')}
                             {renderSkillCell(6, '')}
                             {renderSkillCell(7, '')}
                             {renderSkillCell(8, '')}
@@ -217,7 +217,7 @@ function PaulTable() {
                             {renderSkillCell(2, '7')}
                             {renderSkillCell(3, '8')}
                             {renderSkillCell(4, '9')}
-                            {renderSkillCell(5, '')}
+                            {renderSkillCell(5, '10')}
                             {renderSkillCell(6, '')}
                             {renderSkillCell(7, '')}
                             {renderSkillCell(8, '')}
@@ -237,7 +237,7 @@ function PaulTable() {
                             {renderSkillCell(2, '37', true)}
                             {renderSkillCell(3, '44', true)}
                             {renderSkillCell(4, '51', true)}
-                            {renderSkillCell(5, '', true)}
+                            {renderSkillCell(5, '57', true)}
                             {renderSkillCell(6, '', true)}
                             {renderSkillCell(7, '', true)}
                             {renderSkillCell(8, '', true)}

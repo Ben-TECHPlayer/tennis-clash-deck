@@ -77,8 +77,8 @@ function SabalenkaTable() {
                             <td></td>
                             <td>2</td>
                             <td>3</td>
-                            <td></td>
-                            <td></td>
+                            <td>4</td>
+                            <td>5</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -94,8 +94,8 @@ function SabalenkaTable() {
                             <td></td>
                             <td>6K</td>
                             <td>11K</td>
-                            <td></td>
-                            <td></td>
+                            <td>36K</td>
+                            <td>52K</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -124,8 +124,8 @@ function SabalenkaTable() {
                             <td>Agility</td>
                             {renderSkillCell(1, '4')}
                             {renderSkillCell(2, '6')}
-                            {renderSkillCell(3, '')}
-                            {renderSkillCell(4, '')}
+                            {renderSkillCell(3, '7')}
+                            {renderSkillCell(4, '9')}
                             {renderSkillCell(5, '')}
                             {renderSkillCell(6, '')}
                             {renderSkillCell(7, '')}
@@ -142,8 +142,8 @@ function SabalenkaTable() {
                             <td>Stamina</td>
                             {renderSkillCell(1, '5')}
                             {renderSkillCell(2, '6')}
-                            {renderSkillCell(3, '')}
-                            {renderSkillCell(4, '')}
+                            {renderSkillCell(3, '7')}
+                            {renderSkillCell(4, '8')}
                             {renderSkillCell(5, '')}
                             {renderSkillCell(6, '')}
                             {renderSkillCell(7, '')}
@@ -160,8 +160,8 @@ function SabalenkaTable() {
                             <td>Serve</td>
                             {renderSkillCell(1, '5')}
                             {renderSkillCell(2, '6')}
-                            {renderSkillCell(3, '')}
-                            {renderSkillCell(4, '')}
+                            {renderSkillCell(3, '7')}
+                            {renderSkillCell(4, '8')}
                             {renderSkillCell(5, '')}
                             {renderSkillCell(6, '')}
                             {renderSkillCell(7, '')}
@@ -178,8 +178,8 @@ function SabalenkaTable() {
                             <td>Volley</td>
                             {renderSkillCell(1, '2')}
                             {renderSkillCell(2, '3')}
-                            {renderSkillCell(3, '')}
-                            {renderSkillCell(4, '')}
+                            {renderSkillCell(3, '4')}
+                            {renderSkillCell(4, '4')}
                             {renderSkillCell(5, '')}
                             {renderSkillCell(6, '')}
                             {renderSkillCell(7, '')}
@@ -196,8 +196,8 @@ function SabalenkaTable() {
                             <td>Forehand</td>
                             {renderSkillCell(1, '8')}
                             {renderSkillCell(2, '10')}
-                            {renderSkillCell(3, '')}
-                            {renderSkillCell(4, '')}
+                            {renderSkillCell(3, '12')}
+                            {renderSkillCell(4, '13')}
                             {renderSkillCell(5, '')}
                             {renderSkillCell(6, '')}
                             {renderSkillCell(7, '')}
@@ -214,8 +214,8 @@ function SabalenkaTable() {
                             <td>Backhand</td>
                             {renderSkillCell(1, '6')}
                             {renderSkillCell(2, '7')}
-                            {renderSkillCell(3, '')}
-                            {renderSkillCell(4, '')}
+                            {renderSkillCell(3, '9')}
+                            {renderSkillCell(4, '10')}
                             {renderSkillCell(5, '')}
                             {renderSkillCell(6, '')}
                             {renderSkillCell(7, '')}
@@ -234,8 +234,8 @@ function SabalenkaTable() {
                             <th>Total Power</th>
                             {renderSkillCell(1, '30', true)}
                             {renderSkillCell(2, '38', true)}
-                            {renderSkillCell(3, '', true)}
-                            {renderSkillCell(4, '', true)}
+                            {renderSkillCell(3, '46', true)}
+                            {renderSkillCell(4, '52', true)}
                             {renderSkillCell(5, '', true)}
                             {renderSkillCell(6, '', true)}
                             {renderSkillCell(7, '', true)}

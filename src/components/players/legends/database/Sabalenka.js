@@ -47,8 +47,8 @@ function Sabalenka(){
                                 <td></td>
                                 <td>2</td>
                                 <td>3</td>
-                                <td></td>
-                                <td></td>
+                                <td>4</td>
+                                <td>5</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -64,8 +64,8 @@ function Sabalenka(){
                                 <td></td>
                                 <td>6K</td>
                                 <td>11K</td>
-                                <td></td>
-                                <td></td>
+                                <td>36K</td>
+                                <td>52K</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -108,8 +108,8 @@ function Sabalenka(){
                                 <td>Agility</td>
                                 <td>4</td>
                                 <td>6</td>
-                                <td></td>
-                                <td></td>
+                                <td>7</td>
+                                <td>9</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -126,8 +126,8 @@ function Sabalenka(){
                                 <td>Stamina</td>
                                 <td>5</td>
                                 <td>6</td>
-                                <td></td>
-                                <td></td>
+                                <td>7</td>
+                                <td>8</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -144,8 +144,8 @@ function Sabalenka(){
                                 <td>Serve</td>
                                 <td>5</td>
                                 <td>6</td>
-                                <td></td>
-                                <td></td>
+                                <td>7</td>
+                                <td>8</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -162,8 +162,8 @@ function Sabalenka(){
                                 <td>Volley</td>
                                 <td>2</td>
                                 <td>3</td>
-                                <td></td>
-                                <td></td>
+                                <td>4</td>
+                                <td>4</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -180,8 +180,8 @@ function Sabalenka(){
                                 <td>Forehand</td>
                                 <td>8</td>
                                 <td>10</td>
-                                <td></td>
-                                <td></td>
+                                <td>12</td>
+                                <td>13</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -198,8 +198,8 @@ function Sabalenka(){
                                 <td>Backhand</td>
                                 <td>6</td>
                                 <td>7</td>
-                                <td></td>
-                                <td></td>
+                                <td>9</td>
+                                <td>10</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -218,8 +218,8 @@ function Sabalenka(){
                                 <th>Total Power</th>
                                 <th>30</th>
                                 <th>38</th>
-                                <th></th>
-                                <th></th>
+                                <th>46</th>
+                                <th>52</th>
                                 <th></th>
                                 <th></th>
                                 <th></th>
