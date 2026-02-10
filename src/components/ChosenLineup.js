@@ -10,7 +10,7 @@ export default function ChosenLineup() {
   const [selectedLineupIdx, setSelectedLineupIdx] = useState(0);
   const [tournamentLevel, setTournamentLevel] = useState("master");
 
-  // --- NOUVEAU STATE POUR LE FILTRE PERSONNAGE ---
+  // Filtrer les personnages, par défaut, on met filtre pour tous les personnages
   const [charFilter, setCharFilter] = useState("All");
 
   const [minStats, setMinStats] = useState({
@@ -36,7 +36,7 @@ export default function ChosenLineup() {
     setMinStats((prev) => ({ ...prev, [key]: v }));
   };
 
-  // ---------- Felix Halim logic ----------
+  // ---------- Helper Stats ----------
   const computeStats = (stats, level) => {
     const i = Math.max(0, level - 1);
     const safe = (v) => (v === "-" || v == null ? 0 : Number(v));
@@ -53,34 +53,7 @@ export default function ChosenLineup() {
   const totalPower = (s) =>
     s.ag + s.st + s.se + s.vo + s.fo + s.ba;
 
-  const getEffectiveLevel = (item) => {
-    // 🔥 MODE TOURNAMENT → cap manuel
-    if (gameMode === "tournament") {
-        return Math.min(item.level, levelCap);
-    }
-
-    // 🔥 MODE REGULAR → AUTO
-    if (gameMode === "regular") {
-        if (item.category === "Character") {
-            // Règle spéciale demandée :
-            if (item.level >= 15) return 15;
-            if (item.level === 14) return 14;
-            // Sinon : +2
-            return Math.min(item.level + 2, 15);
-        }
-        // Les équipements gardent leur niveau réel
-        return item.level;
-    }
-
-    // 🔥 MODE GRAND TOUR → cap manuel
-    if (gameMode === "grand-tour") {
-        return Math.min(item.level, levelCap);
-    }
-
-    return item.level;
-  };
-
-
+  // On veut générer les meilleurs lineups
   const bestItems = useMemo(() => {
     if (!savedLevels || Object.keys(savedLevels).length === 0) return {};
 
@@ -103,7 +76,7 @@ export default function ChosenLineup() {
           name: data.name,
           category: data.type,
           level,
-          stats: data.stats,
+          rawStats: data.stats, // On garde les stats brutes pour recalculer après
         });
       }
     });
@@ -112,37 +85,41 @@ export default function ChosenLineup() {
 
     Object.keys(cats).forEach((cat) => {
       const processed = cats[cat].map((item) => {
-        const eff = getEffectiveLevel(item);
-        const s = computeStats(item.stats, eff);
+        // Pour le tri initial (Top 10), on utilise une estimation.
+        let sortLevel = item.level;
+        
+        // En mode Tournament/Grand Tour, on cap dès le tri pour ne pas sélectionner des items lvl 15 inutiles en Rookie
+        if (gameMode !== "regular") {
+            sortLevel = Math.min(item.level, levelCap);
+        }
+        // En Regular, on garde le niveau max pour le tri (car le cap dépendra du perso choisi)
+
+        const s = computeStats(item.rawStats, sortLevel);
         return {
           ...item,
-          effectiveLevel: eff,
-          stats: s,
-          totalPower: totalPower(s),
+          sortStats: s, 
+          sortPower: totalPower(s),
         };
       });
 
-      processed.sort((a, b) => b.totalPower - a.totalPower);
+      processed.sort((a, b) => b.sortPower - a.sortPower);
       result[cat] = processed;
     });
 
     return result;
   }, [savedLevels, gameMode, levelCap]);
 
+
+  // Générer les lineups
   const lineups = useMemo(() => {
     if (!bestItems.Character?.length) return [];
 
-    // --- LOGIQUE MODIFIÉE POUR LE FILTRE PERSONNAGE ---
+    // Filtrer les personnages
     let charsSource = bestItems.Character || [];
-    
-    // Si un filtre est actif, on ne garde que ce personnage
     if (charFilter !== "All") {
         charsSource = charsSource.filter(c => c.name === charFilter);
     }
-
-    // On garde ensuite les 10 meilleurs (du filtre ou du total) pour éviter les boucles infinies
     const chars = charsSource.slice(0, 10);
-    // --------------------------------------------------
 
     const rackets = bestItems.Racket.slice(0, 10);
     const grips = bestItems.Grip.slice(0, 10);
@@ -160,63 +137,101 @@ export default function ChosenLineup() {
 
     const result = [];
 
-    chars.forEach((c) => {
-      rackets.forEach((r) => {
-        grips.forEach((g) => {
-          shoes.forEach((s) => {
-            wrists.forEach((w) => {
-              nutritions.forEach((n) => {
-                workouts.forEach((wk) => {
-                  const totals = {
-                    ag: c.stats.ag + r.stats.ag + g.stats.ag + s.stats.ag + w.stats.ag + n.stats.ag + wk.stats.ag,
-                    st: c.stats.st + r.stats.st + g.stats.st + s.stats.st + w.stats.st + n.stats.st + wk.stats.st,
-                    se: c.stats.se + r.stats.se + g.stats.se + s.stats.se + w.stats.se + n.stats.se + wk.stats.se,
-                    vo: c.stats.vo + r.stats.vo + g.stats.vo + s.stats.vo + w.stats.vo + n.stats.vo + wk.stats.vo,
-                    fo: c.stats.fo + r.stats.fo + g.stats.fo + s.stats.fo + w.stats.fo + n.stats.fo + wk.stats.fo,
-                    ba: c.stats.ba + r.stats.ba + g.stats.ba + s.stats.ba + w.stats.ba + n.stats.ba + wk.stats.ba,
-                  };
+    // Helper pour recalculer un item selon un cap donné
+    const prepareItem = (item, cap) => {
+        const effLevel = Math.min(item.level, cap);
+        return {
+            ...item,
+            effectiveLevel: effLevel,
+            finalStats: computeStats(item.rawStats, effLevel)
+        };
+    };
 
-                  if (
-                    totals.ag >= minAg &&
-                    totals.st >= minSt &&
-                    totals.se >= minSe &&
-                    totals.vo >= minVo &&
-                    totals.fo >= minFo &&
-                    totals.ba >= minBa
-                  ) {
-                    result.push({
-                      items: {
-                        Character: c,
-                        Racket: r,
-                        Grip: g,
-                        Shoe: s,
-                        Wristband: w,
-                        Nutrition: n,
-                        Workout: wk,
-                      },
-                      totals,
-                      totalPower: totalPower(totals),
+    chars.forEach((c) => {
+        // On détermine la limite de niveau
+        let currentCap = levelCap; // Par défaut (Grand Tour / Tournament)
+        let charEffLevel = c.level; // Par défaut
+
+        if (gameMode === "tournament" || gameMode === "grand-tour") {
+            charEffLevel = Math.min(c.level, levelCap);
+        }
+        else if (gameMode === "regular") {
+            // REGULAR : Cap des objets = Niveau du Perso + 2 (Max 15)
+            // Le perso lui-même reste à son niveau réel (sauf si > 15, ce qui est impossible dans le jeu actuel)
+            currentCap = Math.min(15, c.level + 2);
+            charEffLevel = c.level; 
+        }
+
+        // Préparation du Personnage
+        const charItem = {
+            ...c,
+            effectiveLevel: charEffLevel,
+            finalStats: computeStats(c.rawStats, charEffLevel)
+        };
+
+        // Préparation des listes d'items (CAPPÉS PAR CHAR + 2)
+        const curRackets = rackets.map(i => prepareItem(i, currentCap));
+        const curGrips = grips.map(i => prepareItem(i, currentCap));
+        const curShoes = shoes.map(i => prepareItem(i, currentCap));
+        const curWrists = wrists.map(i => prepareItem(i, currentCap));
+        const curNutritions = nutritions.map(i => prepareItem(i, currentCap));
+        const curWorkouts = workouts.map(i => prepareItem(i, currentCap));
+
+        // Boucles imbriquées
+        curRackets.forEach((r) => {
+            curGrips.forEach((g) => {
+                curShoes.forEach((s) => {
+                    curWrists.forEach((w) => {
+                        curNutritions.forEach((n) => {
+                            curWorkouts.forEach((wk) => {
+                                const totals = {
+                                    ag: charItem.finalStats.ag + r.finalStats.ag + g.finalStats.ag + s.finalStats.ag + w.finalStats.ag + n.finalStats.ag + wk.finalStats.ag,
+                                    st: charItem.finalStats.st + r.finalStats.st + g.finalStats.st + s.finalStats.st + w.finalStats.st + n.finalStats.st + wk.finalStats.st,
+                                    se: charItem.finalStats.se + r.finalStats.se + g.finalStats.se + s.finalStats.se + w.finalStats.se + n.finalStats.se + wk.finalStats.se,
+                                    vo: charItem.finalStats.vo + r.finalStats.vo + g.finalStats.vo + s.finalStats.vo + w.finalStats.vo + n.finalStats.vo + wk.finalStats.vo,
+                                    fo: charItem.finalStats.fo + r.finalStats.fo + g.finalStats.fo + s.finalStats.fo + w.finalStats.fo + n.finalStats.fo + wk.finalStats.fo,
+                                    ba: charItem.finalStats.ba + r.finalStats.ba + g.finalStats.ba + s.finalStats.ba + w.finalStats.ba + n.finalStats.ba + wk.finalStats.ba,
+                                };
+
+                                if (
+                                    totals.ag >= minAg &&
+                                    totals.st >= minSt &&
+                                    totals.se >= minSe &&
+                                    totals.vo >= minVo &&
+                                    totals.fo >= minFo &&
+                                    totals.ba >= minBa
+                                ) {
+                                    result.push({
+                                        items: {
+                                            Character: charItem,
+                                            Racket: r,
+                                            Grip: g,
+                                            Shoe: s,
+                                            Wristband: w,
+                                            Nutrition: n,
+                                            Workout: wk,
+                                        },
+                                        totals,
+                                        totalPower: totalPower(totals),
+                                    });
+                                }
+                            });
+                        });
                     });
-                  }
                 });
-              });
             });
-          });
         });
-      });
     });
 
     result.sort((a, b) => b.totalPower - a.totalPower);
     return result.slice(0, 200);
-  }, [bestItems, minStats, charFilter]); // Ajout de charFilter dans les dépendances
+  }, [bestItems, minStats, charFilter, gameMode, levelCap]); 
 
   const dv = (v) => (v > 0 ? v : "-");
 
-  // Récupération de la liste des personnages disponibles pour le dropdown
   const availableCharacters = useMemo(() => {
       if (!bestItems.Character) return [];
-      // On retourne juste les noms, triés alphabétiquement
-      return bestItems.Character.map(c => c.name).sort();
+      return [...new Set(bestItems.Character.map(c => c.name))].sort();
   }, [bestItems]);
 
 
@@ -243,14 +258,14 @@ export default function ChosenLineup() {
             <button style={{ opacity: gameMode === "tournament" ? 1 : 0.6 }} onClick={() => setGameMode('tournament')}>Tournaments</button>
         </div>
 
-        {/* --- NOUVEAU : FILTRE PAR PERSONNAGE --- */}
+        {/* --- FILTRE CHARACTER --- */}
         <div style={{marginTop: "15px", display: "flex", alignItems: "center", gap: "10px", flexWrap: "wrap"}}>
             <span style={{fontWeight: "bold"}}>Filter Character:</span>
             <select 
                 value={charFilter} 
                 onChange={(e) => {
                     setCharFilter(e.target.value);
-                    setSelectedLineupIdx(0); // Reset la sélection quand on change de filtre
+                    setSelectedLineupIdx(0); 
                 }}
                 style={{
                     padding: "5px",
@@ -265,8 +280,6 @@ export default function ChosenLineup() {
                 ))}
             </select>
         </div>
-        {/* --------------------------------------- */}
-
 
         {gameMode === "grand-tour" && (
             <div style={{
@@ -276,7 +289,6 @@ export default function ChosenLineup() {
                 gap: "1rem",
             }}>
                 <span style={{ fontWeight: "bold" }}>Level Cap</span>
-
                 <input
                     type="number"
                     min="1"
@@ -285,18 +297,10 @@ export default function ChosenLineup() {
                     onChange={(e) =>
                         setLevelCap(Math.min(15, Math.max(1, Number(e.target.value))))
                     }
-                    style={{
-                        width: "70px",
-                        padding: "5px",
-                        boxSizing: "border-box",
-                        border: "1px solid #ccc",
-                        borderRadius: "6px",
-                        textAlign: "center"
-                    }}
+                    style={{width: "70px", padding: "5px", textAlign: "center"}}
                 />
             </div>
         )}
-
 
         {gameMode === "tournament" && (
           <div className="choice-category-level-tournament-lineup" style={{ marginTop: "10px" }}>
@@ -308,7 +312,7 @@ export default function ChosenLineup() {
         )}
 
         {gameMode === "regular" && (
-          <p style={{ fontStyle: "italic" }}>Auto (Character Lvl + 2)</p>
+          <p style={{ fontStyle: "italic" }}>Auto (Max = Character Level + 2)</p>
         )}
       </div>
 
@@ -326,11 +330,8 @@ export default function ChosenLineup() {
         <table className="best-lineup-table">
             <thead>
                 <tr>
-                    {/* Header Filtres */}
                     <th style={{textAlign:'left', paddingLeft:'10px', backgroundColor:'#999', minWidth:'100px'}}>Stat</th>
                     <th style={{textAlign:'center', backgroundColor:'#999', minWidth:'100px'}}>Min Filter</th>
-                    
-                    {/* Header Colonnes Résultats */}
                     {lineups.map((l, idx) => (
                         <th key={idx} 
                             onClick={() => setSelectedLineupIdx(idx)} 
@@ -343,15 +344,11 @@ export default function ChosenLineup() {
                 </tr>
             </thead>
             <tbody>
-                {/* BOUCLE SUR LES STATS (Agility, Stamina...) */}
                 {statLabels.map(({label, key}) => (
                     <tr key={key}>
-                        {/* Nom Stat */}
                         <td style={{textAlign:'left', fontWeight:'bold', color:'blue', backgroundColor:'#fff', paddingLeft:'10px'}}>
                             {label}
                         </td>
-                        
-                        {/* Sélecteur MIN (1 à 100) */}
                         <td style={{backgroundColor:'#fff'}}>
                             <input
                                 type="number"
@@ -363,22 +360,17 @@ export default function ChosenLineup() {
                                     width:'60px',
                                     padding:'4px',
                                     border:'1px solid #ccc',
-                                    borderRadius:'3px',
                                     backgroundColor: minStats[key] ? '#e3f2fd' : 'white',
                                     fontWeight: minStats[key] ? 'bold' : 'normal'
                                 }}
                             />
-
                         </td>
-
-                        {/* Valeurs des lineups */}
                         {lineups.map((l, idx) => (
                             <td key={idx} 
                                 onClick={() => setSelectedLineupIdx(idx)} 
                                 className={selectedLineupIdx === idx ? "col-selected" : "clickable"} 
                                 style={{
                                     cursor: 'pointer',
-                                    // Vert si correspond au filtre actif
                                     color: (minStats[key] > 0 && l.totals[key] >= minStats[key]) ? '#2e7d32' : 'inherit',
                                     fontWeight: (selectedLineupIdx === idx) ? 'bold' : 'normal'
                                 }}
@@ -389,7 +381,6 @@ export default function ChosenLineup() {
                     </tr>
                 ))}
 
-                {/* TOTAL POWER */}
                 <tr className="row-total-power">
                     <td colSpan={2} style={{textAlign:'right', fontWeight:'bold', paddingRight:'10px'}}>Total Power (Desc):</td>
                     {lineups.map((l, idx) => (
@@ -399,15 +390,13 @@ export default function ChosenLineup() {
                     ))}
                 </tr>
 
-                {/* NOM DU PERSONNAGE */}
                 <tr style={{backgroundColor: '#666', color: 'white'}}>
                     <td colSpan={2} style={{textAlign:'right', fontWeight:'bold', paddingRight:'10px'}}>Character:</td>
                     {lineups.map((l, idx) => {
                         const char = l.items.Character;
-                        const charName = (char && char.name !== "-") ? char.name : "-";
                         return (
                             <td key={idx} onClick={() => setSelectedLineupIdx(idx)} className={selectedLineupIdx === idx ? "col-selected" : "clickable"} style={{cursor: 'pointer', fontSize:'0.8rem'}}>
-                                {charName}
+                                {char.name}
                             </td>
                         );
                     })}
@@ -417,17 +406,11 @@ export default function ChosenLineup() {
     </div>
 
 
-      {/* SELECTED LINEUP */}
+      {/* Tableau du lineup selectionné */}
       <div className='chosen-lineup-scrollable'>
         {selected ? (
             <table className='chosen-lineup'>
-                <caption>
-                    Lineup selected #{selectedLineupIdx + 1}
-                    {/* <span style={{fontSize:'0.8em', fontWeight:'normal', marginLeft:'10px'}}>
-                        (Power: {selected.totalPower})
-                    </span> */}
-                </caption>
-
+                <caption>Lineup selected #{selectedLineupIdx + 1}</caption>
                 <thead>
                     <tr>
                         <th>Category</th>
@@ -435,14 +418,13 @@ export default function ChosenLineup() {
                         <th>Ag</th><th>St</th><th>Se</th><th>Vo</th><th>Fo</th><th>Ba</th>
                     </tr>
                 </thead>
-
                 <tbody>
                     {['Character','Racket','Grip','Shoe','Wristband','Nutrition','Workout'].map(cat => {
-                        const item = selected.items?.[cat] || { name: "-", level: 0, stats: {} };
-                        const s = item.stats || { ag:0, st:0, se:0, vo:0, fo:0, ba:0 };
+                        const item = selected.items?.[cat] || { name: "-", level: 0, finalStats: {} };
+                        // Ici, on utilise "finalStats" qui a été calculé DANS la boucle (cappé correctement)
+                        // et "effectiveLevel" qui a aussi été stocké.
+                        const s = item.finalStats || { ag:0, st:0, se:0, vo:0, fo:0, ba:0 };
 
-                        const effectiveLevel = (levelCap && item.level > levelCap) ? levelCap : item.level;
-                        
                         return (
                             <tr key={cat}>
                                 <td>{cat}</td>
@@ -451,7 +433,7 @@ export default function ChosenLineup() {
                                         <>
                                             <strong>{item.name}</strong>
                                             <span style={{color:'#666', fontSize:'0.9em', marginLeft:'5px'}}>
-                                                (Lvl {effectiveLevel})
+                                                (Lvl {item.effectiveLevel})
                                             </span>
                                         </>
                                     ) : "-"}
@@ -462,20 +444,17 @@ export default function ChosenLineup() {
                         );
                     })}
                 </tbody>
-
-                {selected && (
-                    <tfoot>
-                        <tr>
-                            <th colSpan={2}>Total Power({selected.totalPower}):</th>
-                            <th>{selected.totals.ag}</th>
-                            <th>{selected.totals.st}</th>
-                            <th>{selected.totals.se}</th>
-                            <th>{selected.totals.vo}</th>
-                            <th>{selected.totals.fo}</th>
-                            <th>{selected.totals.ba}</th>
-                        </tr>
-                    </tfoot>
-                )}
+                <tfoot>
+                    <tr>
+                        <th colSpan={2}>Total Power({selected.totalPower}):</th>
+                        <th>{selected.totals.ag}</th>
+                        <th>{selected.totals.st}</th>
+                        <th>{selected.totals.se}</th>
+                        <th>{selected.totals.vo}</th>
+                        <th>{selected.totals.fo}</th>
+                        <th>{selected.totals.ba}</th>
+                    </tr>
+                </tfoot>
             </table>
         ) : (
             <div style={{padding:'20px', textAlign:'center', color:'#666'}}>
