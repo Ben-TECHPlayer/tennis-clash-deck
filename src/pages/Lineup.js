@@ -108,11 +108,11 @@ function Lineup() {
         <main>
             <div className='header-lineup'>
                 <h1>Lineups</h1>
-                <button style={{backgroundColor: 'red', border: 'none', padding: '10px 20px', borderRadius: '5px', color: 'white', float: 'right'}} onClick={handleReset}>Reset All</button> 
+                <button style={{fontSize: '20px', backgroundColor: 'red', border: 'none', padding: '10px 20px', borderRadius: '5px', color: 'white', float: 'right'}} onClick={handleReset}>Reset All</button> 
             </div>
 
             {/* Afficher les cartes */}
-            <SelectCard setSelectedCardTable={setSelectedCardTable} selectedCardTable={selectedCardTable} />
+            <SelectCard setSelectedCardTable={setSelectedCardTable} selectedCardTable={selectedCardTable} showLevels={true} />
             
             {/* Afficher les deux tableaux correspondants à la carte cliquée */}
             {selectedCardTable === "osaka-table" && <OsakaTable/>}

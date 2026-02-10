@@ -23,7 +23,7 @@ function Card() {
         <h1>Cards Database</h1>
 
         {/* Afficher l'ensemble des cartes */}
-        <SelectCard setSelectedCardTable={handleCardClick} />
+        <SelectCard setSelectedCardTable={handleCardClick} showLevels={false} />
 
         {/* Informer aux utilisateurs que certains données sont incomplets ou incorrects, et seront mises à jour dès que possible */}
         <p style={{marginTop: '20px', fontStyle: 'italic'}}>

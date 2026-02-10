@@ -1,23 +1,32 @@
 import React, { useState, useContext } from 'react';
 import { LevelContext } from '../context/LevelContext';
 
-function SelectCard({ setSelectedCardTable, selectedCardTable }){
+function SelectCard({ setSelectedCardTable, selectedCardTable, showLevels=false }){
     const [selectedCategory, setSelectedCategory] = useState("character"); 
     const [selectedCharacterType, setSelectedCharacterType] = useState("legends");
 
-    // 1. ON RECUPERE LA MÉMOIRE (savedLevels), pas le currentLevel
+    // 1. On récupère la mémoire(savedLevels), pas le currentLevel
     const { savedLevels } = useContext(LevelContext);
 
-    // 2. FONCTION CORRIGÉE
-    const displayName = (name, path) => {
-        // On vérifie si un niveau existe dans la mémoire pour cet ID spécifique
-        // On utilise ?. pour éviter le crash si savedLevels est vide au début
-        const saved = savedLevels ? savedLevels[path] : null;
+    
+    // const displayName = (name, path) => {
+    //     // On vérifie si un niveau existe dans la mémoire pour cet ID spécifique
+    //     // On utilise ?. pour éviter le crash si savedLevels est vide au début
+    //     const saved = savedLevels ? savedLevels[path] : null;
         
-        if (saved) {
-            // Si trouvé, on l'affiche (ex: "Natural Energy (7)")
-            return `${name} (${saved})`;
+    //     if (saved) {
+    //         // Si trouvé, on l'affiche (ex: "Natural Energy (7)")
+    //         return `${name} (${saved})`;
+    //     }
+    //     return name;
+    // };
+
+    const displayName = (name, path) => {
+        // Si showLevels est activé ET qu'on a un niveau sauvegardé
+        if (showLevels && savedLevels && savedLevels[path]) {
+            return `${name} (${savedLevels[path]})`;
         }
+        // Sinon, on retourne juste le nom
         return name;
     };
 
