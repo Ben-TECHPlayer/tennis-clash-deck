@@ -112,7 +112,7 @@ function Lineup() {
             </div>
 
             {/* Afficher les cartes */}
-            <SelectCard setSelectedCardTable={setSelectedCardTable} selectedCardTable={selectedCardTable} showLevels={true} />
+            <SelectCard setSelectedCardTable={setSelectedCardTable} selectedCardTable={selectedCardTable} showLevels={true} autoSelect={true} />
             
             {/* Afficher les deux tableaux correspondants à la carte cliquée */}
             {selectedCardTable === "osaka-table" && <OsakaTable/>}

@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { LevelContext } from '../context/LevelContext';
 
-function SelectCard({ setSelectedCardTable, selectedCardTable, showLevels=false }){
+function SelectCard({ setSelectedCardTable, selectedCardTable, showLevels=false, autoSelect = false }){
     const [selectedCategory, setSelectedCategory] = useState("character"); 
     const [selectedCharacterType, setSelectedCharacterType] = useState("legends");
 
@@ -33,44 +33,46 @@ function SelectCard({ setSelectedCardTable, selectedCardTable, showLevels=false 
         }
 
         // 2. On gère l'affichage du tableau par défaut
-        switch (val) {
-            case "character":
-                // Clic sur l'onglet principal "Character" -> Reset sur Legends / Osaka
-                setSelectedCharacterType("legends");
-                setSelectedCardTable("osaka-table", "players/legends/database/Osaka");
-                break;
+        if (autoSelect) {
+            switch (val) {
+                case "character":
+                    // Clic sur l'onglet principal "Character" -> Reset sur Legends / Osaka
+                    setSelectedCharacterType("legends");
+                    setSelectedCardTable("osaka-table", "players/legends/database/Osaka");
+                    break;
 
-            // --- CAS SPÉCIAUX POUR LES SOUS-BOUTONS ---
-            case "legends":
-                setSelectedCharacterType("legends");
-                setSelectedCardTable("osaka-table", "players/legends/database/Osaka");
-                break;
-            case "champions":
-                setSelectedCharacterType("champions");
-                setSelectedCardTable("jonah-table", "players/champions/database/Jonah");
-                break;
-            // ------------------------------------------
+                // --- CAS SPÉCIAUX POUR LES SOUS-BOUTONS ---
+                case "legends":
+                    setSelectedCharacterType("legends");
+                    setSelectedCardTable("osaka-table", "players/legends/database/Osaka");
+                    break;
+                case "champions":
+                    setSelectedCharacterType("champions");
+                    setSelectedCardTable("jonah-table", "players/champions/database/Jonah");
+                    break;
+                // ------------------------------------------
 
-            case "racket":
-                setSelectedCardTable("starter-racket-table", "attributes/racket/database/StarterRacket");
-                break;
-            case "grip":
-                setSelectedCardTable("starter-grip-table", "attributes/grip/database/StarterGrip");
-                break;
-            case "shoe":
-                setSelectedCardTable("starter-shoe-table", "attributes/shoe/database/StarterShoe");
-                break;
-            case "wristband":
-                setSelectedCardTable("starter-band-table", "attributes/wristband/database/StarterBand");
-                break;
-            case "nutrition":
-                setSelectedCardTable("starter-protein-table", "attributes/nutrition/database/StarterProtein");
-                break;
-            case "workout":
-                setSelectedCardTable("starter-training-table", "attributes/workout/database/StarterTraining");
-                break;
-            default:
-                break;
+                case "racket":
+                    setSelectedCardTable("starter-racket-table", "attributes/racket/database/StarterRacket");
+                    break;
+                case "grip":
+                    setSelectedCardTable("starter-grip-table", "attributes/grip/database/StarterGrip");
+                    break;
+                case "shoe":
+                    setSelectedCardTable("starter-shoe-table", "attributes/shoe/database/StarterShoe");
+                    break;
+                case "wristband":
+                    setSelectedCardTable("starter-band-table", "attributes/wristband/database/StarterBand");
+                    break;
+                case "nutrition":
+                    setSelectedCardTable("starter-protein-table", "attributes/nutrition/database/StarterProtein");
+                    break;
+                case "workout":
+                    setSelectedCardTable("starter-training-table", "attributes/workout/database/StarterTraining");
+                    break;
+                default:
+                    break;
+            }
         }
     };
 
