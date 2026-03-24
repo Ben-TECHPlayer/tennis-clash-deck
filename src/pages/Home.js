@@ -10,15 +10,15 @@ function Home() {
         {
             id: 1,
             type: "season-trends",
-            title: "CARNAVAL SEASON",
-            subtitle: "FEBRAURY 9-23",
+            title: "PSG SEASON",
+            subtitle: "MARCH 9-27",
             bgClass: "bg-season"
         },
         {
             id: 2,
             type: "grand-tour",
-            title: "KYRGIOS OPEN",
-            subtitle: "FEBRAURY 9-23",
+            title: "ROLAND-GARROS OPEN",
+            subtitle: "MARCH 23-APRIL 13",
             link: "/games",
             cta: "Go to play!!!",
             bgClass: "bg-tour",
@@ -76,24 +76,23 @@ function Home() {
                     >
                         {/* CONTENU SPÉCIFIQUE PAR TYPE DE SLIDE */}
                         
-                        
                         {/* 1. SLIDE SEASON TRENDS */}
                         {slide.type === "season-trends" && (
                             <div className="slide-content season-layout"
-                            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/carnaval-season.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/psg-season.webp)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                             >
                                 <h1>{slide.title}</h1>
-                                <div className="date-badge">📅 February 9-23</div>
+                                <div className="date-badge">📅 March 9-27</div>
                             </div>
                         )}
                         
                         {/* 2. SLIDE GRAND TOUR */}
                         {slide.type === "grand-tour" && (
                             <div className="slide-content tour-layout"
-                            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/kyrgios-open.png)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/roland-garros-open.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                             >
                                 <h1>{slide.title}</h1>
-                                <div className="date-badge">📅 February 9-23</div>
+                                <div className="date-badge">📅 March 23-April 13</div>
                                 <Link to={slide.link} className="btn-slider accent">{slide.cta}</Link>
                             </div>
                         )}
@@ -133,10 +132,8 @@ function Home() {
                     </div>
                 ))}
 
-                {/* Flèche Droite */}
                 <button className="arrow right" onClick={nextSlide}>❯</button>
 
-                {/* Points de navigation (Dots) */}
                 <div className="dots-container">
                     {slides.map((_, index) => (
                         <span 
@@ -148,7 +145,6 @@ function Home() {
                 </div>
             </div>
 
-            {/* Section Bonus en dessous (optionnel) */}
             <div className="quick-access">
                 <p>Welcome to Tennis Clash!</p>
             </div>
