@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/tennis-clash-deck/static/css/main.e2146605.css",
-    "main.js": "/tennis-clash-deck/static/js/main.3569fc7e.js",
+    "main.css": "/tennis-clash-deck/static/css/main.8c93e865.css",
+    "main.js": "/tennis-clash-deck/static/js/main.7f0f70bd.js",
     "index.html": "/tennis-clash-deck/index.html",
-    "main.e2146605.css.map": "/tennis-clash-deck/static/css/main.e2146605.css.map",
-    "main.3569fc7e.js.map": "/tennis-clash-deck/static/js/main.3569fc7e.js.map"
+    "main.8c93e865.css.map": "/tennis-clash-deck/static/css/main.8c93e865.css.map",
+    "main.7f0f70bd.js.map": "/tennis-clash-deck/static/js/main.7f0f70bd.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2146605.css",
-    "static/js/main.3569fc7e.js"
+    "static/css/main.8c93e865.css",
+    "static/js/main.7f0f70bd.js"
   ]
 }
