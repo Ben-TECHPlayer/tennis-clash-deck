@@ -10,21 +10,36 @@ function Home() {
         {
             id: 1,
             type: "season-trends",
-            title: "PSG SEASON",
-            subtitle: "MARCH 9-27",
+            title: "BUBLIK SEASON",
+            subtitle: "MARCH 28-APRIL 20",
             bgClass: "bg-season"
         },
         {
             id: 2,
             type: "grand-tour",
-            title: "ROLAND-GARROS OPEN",
-            subtitle: "MARCH 23-APRIL 13",
+            title: "LEGENDS OPEN",
+            subtitle: "APRIL 13-MAY 11",
             link: "/games",
             cta: "Go to play!!!",
             bgClass: "bg-tour",
         },
         {
             id: 3,
+            type: "new-legend-trends",
+            title: "BUBLIK IS HERE!!!",,
+            bgClass: "bg-new-legend"
+        },
+        {
+            id: 4,
+            type: "tournament",
+            title: "INTERNAZIONALI BNL D'ITALIA!",
+            subtitle: "APRIL 16-21",
+            cta: "Win this tournament and go to ESports Tournament Roma Open in May",
+            link: "/games",
+            bgClass: "bg-tournament"
+        },
+        {
+            id: 5,
             type: "legends",
             title: "LEGENDS ARE HERE!!!",
             subtitle: "GO TO MEET OSAKA, KYRGIOS, AND MORE...",
@@ -33,7 +48,7 @@ function Home() {
             bgClass: "bg-legends"
         },
         {
-            id: 4,
+            id: 6,
             type: "champions",
             title: "The champions are here!!!",
             subtitle: "GO TO PLAY ",
@@ -79,36 +94,47 @@ function Home() {
                         {/* 1. SLIDE SEASON TRENDS */}
                         {slide.type === "season-trends" && (
                             <div className="slide-content season-layout"
-                            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/psg-season.webp)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/bublik.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                             >
                                 <h1>{slide.title}</h1>
-                                <div className="date-badge">📅 March 9-27</div>
+                                <div className="date-badge">📅 March 27-April 20</div>
                             </div>
                         )}
                         
                         {/* 2. SLIDE GRAND TOUR */}
                         {slide.type === "grand-tour" && (
                             <div className="slide-content tour-layout"
-                            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/roland-garros-open.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/legends-open.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                             >
                                 <h1>{slide.title}</h1>
-                                <div className="date-badge">📅 March 23-April 13</div>
+                                <div className="date-badge">📅 April 13-May 11</div>
                                 <Link to={slide.link} className="btn-slider accent">{slide.cta}</Link>
                             </div>
                         )}
 
-                        {/* 3. SLIDE TOURNAMENT */}
-                        {/* {slide.type === "tournament" && (
-                            <div className="slide-content tour-layout"
-                            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/carnaval-tournament.png)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                        {/* 3. SLIDE NEW LEGENDS */}
+                        {slide.type === "legends" && (
+                            <div className="slide-content legends-layout"
+                            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/bublik.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                             >
                                 <h1>{slide.title}</h1>
-                                <div className="date-badge">📅 February 12-16</div>
+                                <p>{slide.subtitle}</p>
+                                <Link to={slide.link} className="btn-slider secondary">{slide.cta}</Link>
+                            </div>
+                        )}
+
+                        {/* 4. SLIDE TOURNAMENT */}
+                        {slide.type === "tournament" && (
+                            <div className="slide-content tour-layout"
+                            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/roma-tournament.png)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                            >
+                                <h1>{slide.title}</h1>
+                                <div className="date-badge">📅 April 16-21</div>
                                 <Link to={slide.link} className="btn-slider accent">{slide.cta}</Link>
                             </div>
-                        )} */}
+                        )}
 
-                        {/* 4. SLIDE LEGENDS */}
+                        {/* 5. SLIDE LEGENDS */}
                         {slide.type === "legends" && (
                             <div className="slide-content legends-layout"
                             style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/legends.png)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
@@ -119,7 +145,7 @@ function Home() {
                             </div>
                         )}
 
-                        {/* 5. SLIDE CHAMPIONS */}
+                        {/* 6. SLIDE CHAMPIONS */}
                         {slide.type === "champions" && (
                             <div className="slide-content champions-layout"
                             style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/cover.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
