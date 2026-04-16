@@ -2,9 +2,6 @@
 
 Une application React avancée permettant aux joueurs de *Tennis Clash* de calculer et d'optimiser leur équipement ("Build") en fonction des niveaux de leurs cartes et des règles de tournoi.
 
-![Aperçu de l'application](./public/assets/preview.png)
-*(Note : Pensez à ajouter une capture d'écran de votre site ici)*
-
 ## ✨ Fonctionnalités
 
 Cette application résout le problème complexe du choix d'équipement parmi des centaines de combinaisons possibles.
