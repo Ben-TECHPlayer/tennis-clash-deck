@@ -123,11 +123,12 @@
 
 
 /* 3. Tournament (Sombre/Stade) */
-.bg-tour, .bg-season {
+.bg-tour, .bg-season, .bg-tourmanent, .bg-new-legend {
     background-size: cover;
     background-position: center;
     color: white;
 }
+
 /* .ao-logo-big {
     font-size: 8rem;
     font-weight: 900;
@@ -141,7 +142,9 @@
     text-transform: uppercase;
     z-index: 2;
     margin: 0;
+    color: white;
 }
+
 .date-badge {
     background: #00c6ff;
     color: #000;

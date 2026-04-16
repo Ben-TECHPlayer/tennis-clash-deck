@@ -1,26 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-function Sabalenka(){
+function Bublik(){
     return(
         <div className="item-container">
             <div className="card">
-                <img src={`${process.env.PUBLIC_URL}/assets/sabalenka.svg`} alt="Aryna Sabalenka" />
-                <p>Aryna Sabalenka</p>
+                <img src={`${process.env.PUBLIC_URL}/assets/bublik.svg`} alt="Alexander Bublik" />
+                <p>Alexander Bublik</p>
                 <div className="infos-card">
                     <p>Right-Hander</p>
-                    <p>Aggressive Baseliner</p>
+                    <p>All-Around</p>
                     <p>Unlocked in Tour 3 and above</p>
                     <div className="nationality">
-                        <img className="flag" src={`${process.env.PUBLIC_URL}/assets/belarus.svg`} alt="Belarus"/>
-                        <p>Belarus</p>
+                        <img className="flag" src={`${process.env.PUBLIC_URL}/assets/kazakhstan.svg`} alt="Japan"/>
+                        <p>Kasakhstan</p>
                     </div>
                 </div>
             </div>
             <div className="table-container-scrollable">
                 <div className="table-container">
-                    <table className="sabalenka">
-                        <caption>Sabalenka's Upgrade Table</caption>
+                    <table className="bublik">
+                        <caption>Bublik's Upgrade Table</caption>
                         <thead>
                             <tr>
                                 <th>Level</th>
@@ -53,7 +53,8 @@ function Sabalenka(){
                                 <td>10</td>
                                 <td>20</td>
                                 <td>40</td>
-                                <td>60</td>
+                                <td></td>
+                                <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -81,8 +82,8 @@ function Sabalenka(){
                     </table>
                 </div>
                 <div className="table-container">
-                    <table className="sabalenka">
-                        <caption>Sabalenka's Skills Table</caption>
+                    <table className="bublik">
+                        <caption>Bublik's Skills Table</caption>
                         <thead>
                             <tr>
                                 <th>Level</th>
@@ -110,35 +111,35 @@ function Sabalenka(){
                                 <td>6</td>
                                 <td>7</td>
                                 <td>9</td>
-                                <td>10</td>
+                                <td>11</td>
                                 <td>12</td>
                                 <td>14</td>
+                                <td>15</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td></td>
-                                <td>26</td>
+                                <td>27</td>
                             </tr>
                             <tr>
                                 <td>Stamina</td>
                                 <td>5</td>
-                                <td>6</td>
                                 <td>7</td>
                                 <td>8</td>
                                 <td>9</td>
                                 <td>10</td>
-                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td></td>
-                                <td>18</td>
+                                <td>20</td>
                             </tr>
                             <tr>
                                 <td>Serve</td>
@@ -149,7 +150,7 @@ function Sabalenka(){
                                 <td>9</td>
                                 <td>10</td>
                                 <td>11</td>
-                                <td></td>
+                                <td>12</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -160,77 +161,77 @@ function Sabalenka(){
                             </tr>
                             <tr>
                                 <td>Volley</td>
-                                <td>2</td>
                                 <td>3</td>
-                                <td>4</td>
                                 <td>4</td>
                                 <td>5</td>
                                 <td>6</td>
-                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td></td>
-                                <td>12</td>
+                                <td>16</td>
                             </tr>
                             <tr>
                                 <td>Forehand</td>
+                                <td>7</td>
                                 <td>8</td>
                                 <td>10</td>
-                                <td>12</td>
+                                <td>11</td>
                                 <td>13</td>
+                                <td>14</td>
                                 <td>15</td>
-                                <td>16</td>
-                                <td>18</td>
+                                <td>17</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td></td>
-                                <td>31</td>
+                                <td>27</td>
                             </tr>
                             <tr>
                                 <td>Backhand</td>
+                                <td>5</td>
                                 <td>6</td>
                                 <td>7</td>
+                                <td>8</td>
                                 <td>9</td>
                                 <td>10</td>
                                 <td>11</td>
                                 <td>12</td>
-                                <td>14</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td></td>
-                                <td>24</td>
+                                <td>20</td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr>
                                 <th>Total Power</th>
-                                <th>30</th>
-                                <th>38</th>
-                                <th>46</th>
-                                <th>52</th>
+                                <th>29</th>
+                                <th>37</th>
+                                <th>44</th>
+                                <th>51</th>
                                 <th>59</th>
-                                <th>66</th>
+                                <th>65</th>
                                 <th>72</th>
+                                <th>79</th>
                                 <th></th>
                                 <th></th>
                                 <th></th>
                                 <th></th>
                                 <th></th>
                                 <th></th>
-                                <th></th>
-                                <th>131</th>
+                                <th>130</th>
                             </tr>
                         </tfoot>
                     </table>
@@ -240,4 +241,4 @@ function Sabalenka(){
     );
 }
 
-export default Sabalenka;
+export default Bublik;

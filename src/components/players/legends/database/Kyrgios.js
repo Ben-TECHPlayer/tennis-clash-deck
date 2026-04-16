@@ -49,11 +49,11 @@ function Kyrgios(){
                                 <td>3</td>
                                 <td>4</td>
                                 <td>5</td>
-                                <td>6</td>
                                 <td>8</td>
                                 <td>10</td>
-                                <td></td>
-                                <td></td>
+                                <td>20</td>
+                                <td>40</td>
+                                <td>60</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -70,7 +70,7 @@ function Kyrgios(){
                                 <td>140K</td>
                                 <td>180K</td>
                                 <td>440K</td>
-                                <td></td>
+                                <td>520K</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>

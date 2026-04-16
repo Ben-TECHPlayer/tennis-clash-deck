@@ -18,6 +18,7 @@ import Sabalenka from './components/players/legends/database/Sabalenka';
 import Paul from './components/players/legends/database/Paul';
 import Paolini from './components/players/legends/database/Paolini';
 import Kyrgios from './components/players/legends/database/Kyrgios';
+import Bublik from './components/players/legends/database/Bublik';
 // Champions (Assure-toi que ces fichiers existent bien dans ce dossier)
 import Jonah from './components/players/champions/database/Jonah';
 import Hope from './components/players/champions/database/Hope';
@@ -130,6 +131,7 @@ function App() {
                 <Route path="/card/players/legends/database/Paul" element={<Paul />} />
                 <Route path="/card/players/legends/database/Paolini" element={<Paolini />} />
                 <Route path="/card/players/legends/database/Kyrgios" element={<Kyrgios />} />
+                <Route path="/card/players/legends/database/Bublik" element={<Bublik />} />
 
                 {/* --- ROUTES DES CHAMPIONS --- */}
                 <Route path="/card/players/champions/database/Jonah" element={<Jonah />} />

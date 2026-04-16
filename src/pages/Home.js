@@ -26,7 +26,8 @@ function Home() {
         {
             id: 3,
             type: "new-legend-trends",
-            title: "BUBLIK IS HERE!!!",,
+            title: "BUBLIK IS HERE!!!",
+            cta: "Go to play with Bublik!!!",
             bgClass: "bg-new-legend"
         },
         {
@@ -113,7 +114,7 @@ function Home() {
                         )}
 
                         {/* 3. SLIDE NEW LEGENDS */}
-                        {slide.type === "legends" && (
+                        {slide.type === "new-legend-trends" && (
                             <div className="slide-content legends-layout"
                             style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/bublik.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                             >
@@ -126,7 +127,7 @@ function Home() {
                         {/* 4. SLIDE TOURNAMENT */}
                         {slide.type === "tournament" && (
                             <div className="slide-content tour-layout"
-                            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/roma-tournament.png)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/roma-tournament.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                             >
                                 <h1>{slide.title}</h1>
                                 <div className="date-badge">📅 April 16-21</div>

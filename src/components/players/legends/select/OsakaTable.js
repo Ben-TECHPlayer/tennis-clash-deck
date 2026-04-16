@@ -80,9 +80,9 @@ function OsakaTable() {
                             <td>4</td>
                             <td>5</td>
                             <td>8</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>10</td>
+                            <td>20</td>
+                            <td>40</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -98,9 +98,9 @@ function OsakaTable() {
                             <td>36K</td>
                             <td>52K</td>
                             <td>140K</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>180K</td>
+                            <td>440K</td>
+                            <td>520K</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -128,9 +128,9 @@ function OsakaTable() {
                             {renderSkillCell(3, '7')}
                             {renderSkillCell(4, '9')}
                             {renderSkillCell(5, '10')}
-                            {renderSkillCell(6, '')}
-                            {renderSkillCell(7, '')}
-                            {renderSkillCell(8, '')}
+                            {renderSkillCell(6, '12')}
+                            {renderSkillCell(7, '14')}
+                            {renderSkillCell(8, '15')}
                             {renderSkillCell(9, '')}
                             {renderSkillCell(10, '')}
                             {renderSkillCell(11, '')}
@@ -146,9 +146,9 @@ function OsakaTable() {
                             {renderSkillCell(3, '7')}
                             {renderSkillCell(4, '8')}
                             {renderSkillCell(5, '9')}
-                            {renderSkillCell(6, '')}
-                            {renderSkillCell(7, '')}
-                            {renderSkillCell(8, '')}
+                            {renderSkillCell(6, '10')}
+                            {renderSkillCell(7, '11')}
+                            {renderSkillCell(8, '12')}
                             {renderSkillCell(9, '')}
                             {renderSkillCell(10, '')}
                             {renderSkillCell(11, '')}
@@ -164,9 +164,9 @@ function OsakaTable() {
                             {renderSkillCell(3, '6')}
                             {renderSkillCell(4, '7')}
                             {renderSkillCell(5, '8')}
-                            {renderSkillCell(6, '')}
-                            {renderSkillCell(7, '')}
-                            {renderSkillCell(8, '')}
+                            {renderSkillCell(6, '9')}
+                            {renderSkillCell(7, '10')}
+                            {renderSkillCell(8, '11')}
                             {renderSkillCell(9, '')}
                             {renderSkillCell(10, '')}
                             {renderSkillCell(11, '')}
@@ -182,9 +182,9 @@ function OsakaTable() {
                             {renderSkillCell(3, '4')}
                             {renderSkillCell(4, '5')}
                             {renderSkillCell(5, '5')}
-                            {renderSkillCell(6, '')}
-                            {renderSkillCell(7, '')}
-                            {renderSkillCell(8, '')}
+                            {renderSkillCell(6, '6')}
+                            {renderSkillCell(7, '7')}
+                            {renderSkillCell(8, '8')}
                             {renderSkillCell(9, '')}
                             {renderSkillCell(10, '')}
                             {renderSkillCell(11, '')}
@@ -200,9 +200,9 @@ function OsakaTable() {
                             {renderSkillCell(3, '10')}
                             {renderSkillCell(4, '12')}
                             {renderSkillCell(5, '13')}
-                            {renderSkillCell(6, '')}
-                            {renderSkillCell(7, '')}
-                            {renderSkillCell(8, '')}
+                            {renderSkillCell(6, '15')}
+                            {renderSkillCell(7, '16')}
+                            {renderSkillCell(8, '18')}
                             {renderSkillCell(9, '')}
                             {renderSkillCell(10, '')}
                             {renderSkillCell(11, '')}
@@ -218,9 +218,9 @@ function OsakaTable() {
                             {renderSkillCell(3, '9')}
                             {renderSkillCell(4, '10')}
                             {renderSkillCell(5, '11')}
-                            {renderSkillCell(6, '')}
-                            {renderSkillCell(7, '')}
-                            {renderSkillCell(8, '')}
+                            {renderSkillCell(6, '12')}
+                            {renderSkillCell(7, '14')}
+                            {renderSkillCell(8, '15')}
                             {renderSkillCell(9, '')}
                             {renderSkillCell(10, '')}
                             {renderSkillCell(11, '')}
@@ -238,9 +238,9 @@ function OsakaTable() {
                             {renderSkillCell(3, '42', true)}
                             {renderSkillCell(4, '50', true)}
                             {renderSkillCell(5, '55', true)}
-                            {renderSkillCell(6, '', true)}
-                            {renderSkillCell(7, '', true)}
-                            {renderSkillCell(8, '', true)}
+                            {renderSkillCell(6, '63', true)}
+                            {renderSkillCell(7, '71', true)}
+                            {renderSkillCell(8, '78', true)}
                             {renderSkillCell(9, '', true)}
                             {renderSkillCell(10, '', true)}
                             {renderSkillCell(11, '', true)}

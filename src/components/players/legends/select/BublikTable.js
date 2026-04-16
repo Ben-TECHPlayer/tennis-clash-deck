@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { LevelContext } from '../../../../context/LevelContext'; 
 
-function PaulTable() {
-    const ITEM_ID = "players/legends/database/Paul";
+function BublikTable() {
+    const ITEM_ID = "players/legends/database/Bublik";
 
     // On récupère updateLevel au lieu de setCurrentLevel
     const { savedLevels, updateLevel, setActiveItemPath } = useContext(LevelContext);
@@ -49,8 +49,8 @@ function PaulTable() {
     return(
         <div className="table-container-scrollable">
             <div className="table-container">
-                <table className="paul">
-                    <caption>Paul's Upgrade Table</caption>
+                <table className="bublik">
+                    <caption>Bublik's Upgrade Table</caption>
                     <thead>
                         <tr>
                             <th>Level</th>
@@ -83,7 +83,7 @@ function PaulTable() {
                             <td>10</td>
                             <td>20</td>
                             <td>40</td>
-                            <td>60</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -112,8 +112,8 @@ function PaulTable() {
                 </table>
             </div>
             <div className="table-container">
-                <table className="paul">
-                    <caption>Paul's Skills Table</caption>
+                <table className="bublik">
+                    <caption>Bublik's Skills Table</caption>
                     <thead>
                         <tr>
                             <th>Level</th>
@@ -123,68 +123,32 @@ function PaulTable() {
                     <tbody>
                         <tr>
                             <td>Agility</td>
-                            {renderSkillCell(1, '5')}
+                            {renderSkillCell(1, '4')}
                             {renderSkillCell(2, '6')}
-                            {renderSkillCell(3, '8')}
-                            {renderSkillCell(4, '10')}
+                            {renderSkillCell(3, '7')}
+                            {renderSkillCell(4, '9')}
                             {renderSkillCell(5, '11')}
-                            {renderSkillCell(6, '13')}
+                            {renderSkillCell(6, '12')}
                             {renderSkillCell(7, '14')}
-                            {renderSkillCell(8, '')}
+                            {renderSkillCell(8, '15')}
                             {renderSkillCell(9, '')}
                             {renderSkillCell(10, '')}
                             {renderSkillCell(11, '')}
                             {renderSkillCell(12, '')}
                             {renderSkillCell(13, '')}
                             {renderSkillCell(14, '')}
-                            {renderSkillCell(15, '28')}
+                            {renderSkillCell(15, '27')}
                         </tr>
                         <tr>
                             <td>Stamina</td>
                             {renderSkillCell(1, '5')}
-                            {renderSkillCell(2, '6')}
-                            {renderSkillCell(3, '7')}
-                            {renderSkillCell(4, '8')}
-                            {renderSkillCell(5, '9')}
-                            {renderSkillCell(6, '10')}
-                            {renderSkillCell(7, '10')}
-                            {renderSkillCell(8, '')}
-                            {renderSkillCell(9, '')}
-                            {renderSkillCell(10, '')}
-                            {renderSkillCell(11, '')}
-                            {renderSkillCell(12, '')}
-                            {renderSkillCell(13, '')}
-                            {renderSkillCell(14, '')}
-                            {renderSkillCell(15, '18')}
-                        </tr>
-                        <tr>
-                            <td>Serve</td>
-                            {renderSkillCell(1, '4')}
-                            {renderSkillCell(2, '5')}
-                            {renderSkillCell(3, '6')}
-                            {renderSkillCell(4, '7')}
-                            {renderSkillCell(5, '8')}
-                            {renderSkillCell(6, '9')}
-                            {renderSkillCell(7, '10')}
-                            {renderSkillCell(8, '')}
-                            {renderSkillCell(9, '')}
-                            {renderSkillCell(10, '')}
-                            {renderSkillCell(11, '')}
-                            {renderSkillCell(12, '')}
-                            {renderSkillCell(13, '')}
-                            {renderSkillCell(14, '')}
-                            {renderSkillCell(15, '17')}
-                        </tr>
-                        <tr>
-                            <td>Volley</td>
-                            {renderSkillCell(1, '5')}
-                            {renderSkillCell(2, '6')}
-                            {renderSkillCell(3, '7')}
-                            {renderSkillCell(4, '8')}
-                            {renderSkillCell(5, '9')}
-                            {renderSkillCell(6, '10')}
-                            {renderSkillCell(7, '11')}
-                            {renderSkillCell(8, '')}
+                            {renderSkillCell(2, '7')}
+                            {renderSkillCell(3, '8')}
+                            {renderSkillCell(4, '9')}
+                            {renderSkillCell(5, '10')}
+                            {renderSkillCell(6, '11')}
+                            {renderSkillCell(7, '12')}
+                            {renderSkillCell(8, '13')}
                             {renderSkillCell(9, '')}
                             {renderSkillCell(10, '')}
                             {renderSkillCell(11, '')}
@@ -194,40 +158,76 @@ function PaulTable() {
                             {renderSkillCell(15, '20')}
                         </tr>
                         <tr>
-                            <td>Forehand</td>
+                            <td>Serve</td>
                             {renderSkillCell(1, '5')}
-                            {renderSkillCell(2, '7')}
-                            {renderSkillCell(3, '8')}
-                            {renderSkillCell(4, '9')}
-                            {renderSkillCell(5, '10')}
-                            {renderSkillCell(6, '11')}
-                            {renderSkillCell(7, '13')}
-                            {renderSkillCell(8, '')}
+                            {renderSkillCell(2, '6')}
+                            {renderSkillCell(3, '7')}
+                            {renderSkillCell(4, '8')}
+                            {renderSkillCell(5, '9')}
+                            {renderSkillCell(6, '10')}
+                            {renderSkillCell(7, '11')}
+                            {renderSkillCell(8, '12')}
                             {renderSkillCell(9, '')}
                             {renderSkillCell(10, '')}
                             {renderSkillCell(11, '')}
                             {renderSkillCell(12, '')}
                             {renderSkillCell(13, '')}
                             {renderSkillCell(14, '')}
-                            {renderSkillCell(15, '22')}
+                            {renderSkillCell(15, '20')}
+                        </tr>
+                        <tr>
+                            <td>Volley</td>
+                            {renderSkillCell(1, '3')}
+                            {renderSkillCell(2, '4')}
+                            {renderSkillCell(3, '5')}
+                            {renderSkillCell(4, '6')}
+                            {renderSkillCell(5, '7')}
+                            {renderSkillCell(6, '8')}
+                            {renderSkillCell(7, '9')}
+                            {renderSkillCell(8, '10')}
+                            {renderSkillCell(9, '')}
+                            {renderSkillCell(10, '')}
+                            {renderSkillCell(11, '')}
+                            {renderSkillCell(12, '')}
+                            {renderSkillCell(13, '')}
+                            {renderSkillCell(14, '')}
+                            {renderSkillCell(15, '16')}
+                        </tr>
+                        <tr>
+                            <td>Forehand</td>
+                            {renderSkillCell(1, '7')}
+                            {renderSkillCell(2, '8')}
+                            {renderSkillCell(3, '10')}
+                            {renderSkillCell(4, '11')}
+                            {renderSkillCell(5, '13')}
+                            {renderSkillCell(6, '14')}
+                            {renderSkillCell(7, '15')}
+                            {renderSkillCell(8, '17')}
+                            {renderSkillCell(9, '')}
+                            {renderSkillCell(10, '')}
+                            {renderSkillCell(11, '')}
+                            {renderSkillCell(12, '')}
+                            {renderSkillCell(13, '')}
+                            {renderSkillCell(14, '')}
+                            {renderSkillCell(15, '27')}
                         </tr>
                         <tr>
                             <td>Backhand</td>
                             {renderSkillCell(1, '5')}
-                            {renderSkillCell(2, '7')}
-                            {renderSkillCell(3, '8')}
-                            {renderSkillCell(4, '9')}
-                            {renderSkillCell(5, '10')}
-                            {renderSkillCell(6, '11')}
-                            {renderSkillCell(7, '12')}
-                            {renderSkillCell(8, '')}
+                            {renderSkillCell(2, '6')}
+                            {renderSkillCell(3, '7')}
+                            {renderSkillCell(4, '8')}
+                            {renderSkillCell(5, '9')}
+                            {renderSkillCell(6, '10')}
+                            {renderSkillCell(7, '11')}
+                            {renderSkillCell(8, '12')}
                             {renderSkillCell(9, '')}
                             {renderSkillCell(10, '')}
                             {renderSkillCell(11, '')}
                             {renderSkillCell(12, '')}
                             {renderSkillCell(13, '')}
                             {renderSkillCell(14, '')}
-                            {renderSkillCell(15, '22')}
+                            {renderSkillCell(15, '20')}
                         </tr>
                     </tbody>
                     <tfoot>
@@ -237,17 +237,17 @@ function PaulTable() {
                             {renderSkillCell(2, '37', true)}
                             {renderSkillCell(3, '44', true)}
                             {renderSkillCell(4, '51', true)}
-                            {renderSkillCell(5, '57', true)}
-                            {renderSkillCell(6, '64', true)}
-                            {renderSkillCell(7, '70', true)}
-                            {renderSkillCell(8, '', true)}
+                            {renderSkillCell(5, '59', true)}
+                            {renderSkillCell(6, '65', true)}
+                            {renderSkillCell(7, '72', true)}
+                            {renderSkillCell(8, '79', true)}
                             {renderSkillCell(9, '', true)}
                             {renderSkillCell(10, '', true)}
                             {renderSkillCell(11, '', true)}
                             {renderSkillCell(12, '', true)}
                             {renderSkillCell(13, '', true)}
                             {renderSkillCell(14, '', true)}
-                            {renderSkillCell(15, '127', true)}
+                            {renderSkillCell(15, '130', true)}
                         </tr>
                     </tfoot>
                 </table>
@@ -256,4 +256,4 @@ function PaulTable() {
     );
 }
 
-export default PaulTable;
+export default BublikTable;

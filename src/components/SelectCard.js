@@ -32,6 +32,10 @@ function SelectCard({ setSelectedCardTable, selectedCardTable, showLevels=false,
             setSelectedCategory(val);
         }
 
+        if (val === "legends" || val === "champions") {
+            setSelectedCharacterType(val);
+        }
+
         // 2. On gère l'affichage du tableau par défaut
         if (autoSelect) {
             switch (val) {
@@ -42,14 +46,14 @@ function SelectCard({ setSelectedCardTable, selectedCardTable, showLevels=false,
                     break;
 
                 // --- CAS SPÉCIAUX POUR LES SOUS-BOUTONS ---
-                case "legends":
-                    setSelectedCharacterType("legends");
-                    setSelectedCardTable("osaka-table", "players/legends/database/Osaka");
-                    break;
-                case "champions":
-                    setSelectedCharacterType("champions");
-                    setSelectedCardTable("jonah-table", "players/champions/database/Jonah");
-                    break;
+                    case "legends":
+                        setSelectedCharacterType("legends");
+                        setSelectedCardTable("osaka-table", "players/legends/database/Osaka");
+                        break;
+                    case "champions":
+                        setSelectedCharacterType("champions");
+                        setSelectedCardTable("jonah-table", "players/champions/database/Jonah");
+                        break;
                 // ------------------------------------------
 
                 case "racket":
@@ -123,17 +127,19 @@ function SelectCard({ setSelectedCardTable, selectedCardTable, showLevels=false,
                         <img src={`${process.env.PUBLIC_URL}/assets/kyrgios.svg`} alt="Nick Kyrgios" />
                         <p>{displayName("Nick Kyrgios", "players/legends/database/Kyrgios")}</p>
                     </div>
+                    <div onClick={() => setSelectedCardTable("bublik-table", "players/legends/database/Bublik")} style={{ color: selectedCardTable === "bublik-table" ? '#007bff' : 'black' }}>
+                        <img src={`${process.env.PUBLIC_URL}/assets/bublik.svg`} alt="Alexander Bublik" />
+                        <p>{displayName("Alexander Bublik", "players/legends/database/Bublik")}</p>
+                    </div>
                 </div>
                 )}
 
                 {selectedCategory === "character" && selectedCharacterType === "champions" && (
                 <div className="cards-character-champions">
-                    {/* ... Contenu Champions (Jonah, etc.) inchangé ... */}
                     <div onClick={() => setSelectedCardTable("jonah-table", "players/champions/database/Jonah")} style={{ color: selectedCardTable === "jonah-table" ? '#007bff' : 'black' }}>
                         <img src={`${process.env.PUBLIC_URL}/assets/jonah.svg`} alt="Jonah" />
                         <p>{displayName("Jonah", "players/champions/database/Jonah")}</p>
                     </div>
-                    {/* ... autres champions (Hope, Florence, etc) ... */}
                     <div onClick={() => setSelectedCardTable("hope-table", "players/champions/database/Hope")} style={{ color: selectedCardTable === "hope-table" ? '#007bff' : 'black' }}>
                         <img src={`${process.env.PUBLIC_URL}/assets/hope.svg`} alt="Hope" />
                         <p>{displayName("Hope", "players/champions/database/Hope")}</p>
@@ -199,17 +205,12 @@ function SelectCard({ setSelectedCardTable, selectedCardTable, showLevels=false,
             </div>
             )}
 
-            {/* LE RESTE DU JSX (Racket, Grip, Shoe...) RESTE EXACTEMENT LE MÊME QUE DANS LA RÉPONSE PRÉCÉDENTE */}
-            {/* Je ne le répète pas pour gagner de la place, assure-toi de garder tes blocs Racket/Grip... avec les onClick d'origine ou avec l'appel de ta fonction si tu veux, 
-                mais pour le moment seul le haut du composant a changé pour gérer la logique automatique. */}
-            {selectedCategory === "racket" && (
+             {selectedCategory === "racket" && (
                 <div className="cards-racket">
-                    {/* ... Contenu Racket identique ... */}
                     <div onClick={() => setSelectedCardTable("starter-racket-table", "attributes/racket/database/StarterRacket")} style={{ color: selectedCardTable === "starter-racket-table" ? '#007bff' : 'black' }}>
                         <img src={`${process.env.PUBLIC_URL}/assets/starter-racket.svg`} alt="Starter Racket" />
                         <p>{displayName("Starter Racket", "attributes/racket/database/StarterRacket")}</p>
                     </div>
-                    {/* ... suite des raquettes ... */}
                     <div onClick={() => setSelectedCardTable("eagle-table", "attributes/racket/database/Eagle")} style={{ color: selectedCardTable === "eagle-table" ? '#007bff' : 'black' }}>
                         <img src={`${process.env.PUBLIC_URL}/assets/the-eagle.svg`} alt="The Eagle" />
                         <p>{displayName("The Eagle", "attributes/racket/database/Eagle")}</p>
@@ -251,7 +252,6 @@ function SelectCard({ setSelectedCardTable, selectedCardTable, showLevels=false,
                         <img src={`${process.env.PUBLIC_URL}/assets/starter-grip.svg`} alt="Starter Grip" />
                         <p>{displayName("Starter Grip", "attributes/grip/database/StarterGrip")}</p>
                     </div>
-                    {/* ... suite grips ... */}
                     <div onClick={() => setSelectedCardTable("warrior-table", "attributes/grip/database/Warrior")} style={{ color: selectedCardTable === "warrior-table" ? '#007bff' : 'black' }}>
                         <img src={`${process.env.PUBLIC_URL}/assets/the-warrior.svg`} alt="The Warrior" />
                         <p>{displayName("The Warrior", "attributes/grip/database/Warrior")}</p>
@@ -293,7 +293,6 @@ function SelectCard({ setSelectedCardTable, selectedCardTable, showLevels=false,
                         <img src={`${process.env.PUBLIC_URL}/assets/starter-shoe.svg`} alt="Starter Shoes" />
                         <p>{displayName("Starter Shoes", "attributes/shoe/database/StarterShoe")}</p>
                     </div>
-                    {/* ... suite shoes ... */}
                     <div onClick={() => setSelectedCardTable("feather-table", "attributes/shoe/database/Feather")} style={{ color: selectedCardTable === "feather-table" ? '#007bff' : 'black' }}>
                         <img src={`${process.env.PUBLIC_URL}/assets/the-feather.svg`} alt="The Feather" />
                         <p>{displayName("The Feather", "attributes/shoe/database/Feather")}</p>
@@ -335,7 +334,6 @@ function SelectCard({ setSelectedCardTable, selectedCardTable, showLevels=false,
                         <img src={`${process.env.PUBLIC_URL}/assets/starter-band.svg`} alt="Starter Band" />
                         <p>{displayName("Starter Band", "attributes/wristband/database/StarterBand")}</p>
                     </div>
-                    {/* ... suite wristbands ... */}
                     <div onClick={() => setSelectedCardTable("tomahawk-table", "attributes/wristband/database/Tomahawk")} style={{ color: selectedCardTable === "tomahawk-table" ? '#007bff' : 'black' }}>
                         <img src={`${process.env.PUBLIC_URL}/assets/the-tomahawk.svg`} alt="The Tomahawk" />
                         <p>{displayName("The Tomahawk", "attributes/wristband/database/Tomahawk")}</p>
@@ -377,7 +375,6 @@ function SelectCard({ setSelectedCardTable, selectedCardTable, showLevels=false,
                         <img src={`${process.env.PUBLIC_URL}/assets/starter-protein.svg`} alt="Starter Protein" />
                         <p>{displayName("Starter Protein", "attributes/nutrition/database/StarterProtein")}</p>
                     </div>
-                    {/* ... suite nutrition ... */}
                     <div onClick={() => setSelectedCardTable("lean-protein-table", "attributes/nutrition/database/LeanProtein")} style={{ color: selectedCardTable === "lean-protein-table" ? '#007bff' : 'black' }}>
                         <img src={`${process.env.PUBLIC_URL}/assets/lean-protein.svg`} alt="Lean Protein" />
                         <p>{displayName("Lean Protein", "attributes/nutrition/database/LeanProtein")}</p>
@@ -419,7 +416,6 @@ function SelectCard({ setSelectedCardTable, selectedCardTable, showLevels=false,
                         <img src={`${process.env.PUBLIC_URL}/assets/starter-training.svg`} alt="Starter Training" />
                         <p>{displayName("Starter Training", "attributes/workout/database/StarterTraining")}</p>
                     </div>
-                    {/* ... suite workout ... */}
                     <div onClick={() => setSelectedCardTable("endurance-table", "attributes/workout/database/Endurance")} style={{ color: selectedCardTable === "endurance-table" ? '#007bff' : 'black' }}>
                         <img src={`${process.env.PUBLIC_URL}/assets/endurance.svg`} alt="Endurance" />
                         <p>{displayName("Endurance", "attributes/workout/database/Endurance")}</p>

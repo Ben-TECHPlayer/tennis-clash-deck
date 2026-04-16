@@ -79,11 +79,11 @@ function SabalenkaTable() {
                             <td>3</td>
                             <td>4</td>
                             <td>5</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>8</td>
+                            <td>10</td>
+                            <td>20</td>
+                            <td>40</td>
+                            <td>60</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -96,10 +96,10 @@ function SabalenkaTable() {
                             <td>11K</td>
                             <td>36K</td>
                             <td>52K</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>140K</td>
+                            <td>180K</td>
+                            <td>440K</td>
+                            <td>520K</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -126,9 +126,9 @@ function SabalenkaTable() {
                             {renderSkillCell(2, '6')}
                             {renderSkillCell(3, '7')}
                             {renderSkillCell(4, '9')}
-                            {renderSkillCell(5, '')}
-                            {renderSkillCell(6, '')}
-                            {renderSkillCell(7, '')}
+                            {renderSkillCell(5, '10')}
+                            {renderSkillCell(6, '12')}
+                            {renderSkillCell(7, '14')}
                             {renderSkillCell(8, '')}
                             {renderSkillCell(9, '')}
                             {renderSkillCell(10, '')}
@@ -144,9 +144,9 @@ function SabalenkaTable() {
                             {renderSkillCell(2, '6')}
                             {renderSkillCell(3, '7')}
                             {renderSkillCell(4, '8')}
-                            {renderSkillCell(5, '')}
-                            {renderSkillCell(6, '')}
-                            {renderSkillCell(7, '')}
+                            {renderSkillCell(5, '9')}
+                            {renderSkillCell(6, '10')}
+                            {renderSkillCell(7, '10')}
                             {renderSkillCell(8, '')}
                             {renderSkillCell(9, '')}
                             {renderSkillCell(10, '')}
@@ -162,9 +162,9 @@ function SabalenkaTable() {
                             {renderSkillCell(2, '6')}
                             {renderSkillCell(3, '7')}
                             {renderSkillCell(4, '8')}
-                            {renderSkillCell(5, '')}
-                            {renderSkillCell(6, '')}
-                            {renderSkillCell(7, '')}
+                            {renderSkillCell(5, '9')}
+                            {renderSkillCell(6, '10')}
+                            {renderSkillCell(7, '11')}
                             {renderSkillCell(8, '')}
                             {renderSkillCell(9, '')}
                             {renderSkillCell(10, '')}
@@ -180,9 +180,9 @@ function SabalenkaTable() {
                             {renderSkillCell(2, '3')}
                             {renderSkillCell(3, '4')}
                             {renderSkillCell(4, '4')}
-                            {renderSkillCell(5, '')}
-                            {renderSkillCell(6, '')}
-                            {renderSkillCell(7, '')}
+                            {renderSkillCell(5, '5')}
+                            {renderSkillCell(6, '6')}
+                            {renderSkillCell(7, '6')}
                             {renderSkillCell(8, '')}
                             {renderSkillCell(9, '')}
                             {renderSkillCell(10, '')}
@@ -198,9 +198,9 @@ function SabalenkaTable() {
                             {renderSkillCell(2, '10')}
                             {renderSkillCell(3, '12')}
                             {renderSkillCell(4, '13')}
-                            {renderSkillCell(5, '')}
-                            {renderSkillCell(6, '')}
-                            {renderSkillCell(7, '')}
+                            {renderSkillCell(5, '15')}
+                            {renderSkillCell(6, '16')}
+                            {renderSkillCell(7, '18')}
                             {renderSkillCell(8, '')}
                             {renderSkillCell(9, '')}
                             {renderSkillCell(10, '')}
@@ -216,9 +216,9 @@ function SabalenkaTable() {
                             {renderSkillCell(2, '7')}
                             {renderSkillCell(3, '9')}
                             {renderSkillCell(4, '10')}
-                            {renderSkillCell(5, '')}
-                            {renderSkillCell(6, '')}
-                            {renderSkillCell(7, '')}
+                            {renderSkillCell(5, '11')}
+                            {renderSkillCell(6, '12')}
+                            {renderSkillCell(7, '14')}
                             {renderSkillCell(8, '')}
                             {renderSkillCell(9, '')}
                             {renderSkillCell(10, '')}
@@ -236,9 +236,9 @@ function SabalenkaTable() {
                             {renderSkillCell(2, '38', true)}
                             {renderSkillCell(3, '46', true)}
                             {renderSkillCell(4, '52', true)}
-                            {renderSkillCell(5, '', true)}
-                            {renderSkillCell(6, '', true)}
-                            {renderSkillCell(7, '', true)}
+                            {renderSkillCell(5, '59', true)}
+                            {renderSkillCell(6, '66', true)}
+                            {renderSkillCell(7, '72', true)}
                             {renderSkillCell(8, '', true)}
                             {renderSkillCell(9, '', true)}
                             {renderSkillCell(10, '', true)}

@@ -11,6 +11,7 @@ import KyrgiosTable from '../components/players/legends/select/KyrgiosTable';
 import PaoliniTable from '../components/players/legends/select/PaoliniTable';
 import SabalenkaTable from '../components/players/legends/select/SabalenkaTable';
 import PaulTable from '../components/players/legends/select/PaulTable';
+import BublikTable from '../components/players/legends/select/BublikTable';
 
 import JonahTable from '../components/players/champions/select/JonahTable';
 import HopeTable from '../components/players/champions/select/HopeTable';
@@ -120,6 +121,7 @@ function Lineup() {
             {selectedCardTable === "sabalenka-table" && <SabalenkaTable/>}
             {selectedCardTable === "paolini-table" && <PaoliniTable/>}
             {selectedCardTable === "kyrgios-table" && <KyrgiosTable/>}
+            {selectedCardTable === "bublik-table" && <BublikTable/> }
         
             {selectedCardTable === "jonah-table" && <JonahTable/>}
             {selectedCardTable === "hope-table" && <HopeTable/>}
